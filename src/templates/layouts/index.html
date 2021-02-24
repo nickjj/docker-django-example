@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A production ready example Django app that's using Docker and Docker Compose.">
+
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <script defer src="{% static 'js/app.js' %}"></script>
+
+    {# Generated with: https://realfavicongenerator.net/ #}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'safari-pinned-tab.svg' %}" color="#61b9d2">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body class="flex flex-col h-screen justify-between">
+    <div class="bg-gray-700">
+      <div class="max-w-screen-lg mx-auto py-3 px-3 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between flex-wrap">
+          <div class="flex-1 flex items-center">
+            <span class="flex p-2 rounded-lg bg-gray-900">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </span>
+            <p class="ml-3 font-medium text-white truncate">
+              Django {{ django_ver }} and Python {{ python_ver }}
+            </p>
+          </div>
+          <div class="mt-2 order-3 w-full sm:mt-0 sm:w-auto">
+            <div class="rounded-md shadow-sm">
+              <span class="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-gray-500">
+                DEBUG = {{ debug }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="max-w-screen-lg mx-auto mb-auto">
+      {% block body %}{% endblock %}
+    </main>
+
+    <footer class="text-center mt-6 pb-6 h-10">
+      <p class="text-gray-500">
+        Coded with <svg class="h-5 w-5 text-red-600 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg> by <a class="border-b mb-1" href="https://nickjanetakis.com">Nick Janetakis</a>
+      </p>
+    </footer>
+  </body>
+</html>

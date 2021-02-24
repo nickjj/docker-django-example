@@ -1,0 +1,77 @@
+version: "3.4"
+
+x-app: &default-app
+  build:
+    context: "."
+    target: "app"
+    args:
+      - "DEBUG=${DEBUG:-false}"
+      - "NODE_ENV=${NODE_ENV:-production}"
+  depends_on:
+    - "postgres"
+    - "redis"
+  env_file:
+    - ".env"
+  restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+  stop_grace_period: "3s"
+  tty: true
+  volumes:
+    - "${DOCKER_WEB_VOLUME:-./public_collected:/app/public_collected}"
+
+services:
+  postgres:
+    deploy:
+      resources:
+        limits:
+          cpus: "${DOCKER_POSTGRES_CPUS:-0}"
+          memory: "${DOCKER_POSTGRES_MEMORY:-0}"
+    env_file:
+      - ".env"
+    image: "postgres:13.2"
+    restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+    stop_grace_period: "3s"
+    volumes:
+      - "postgres:/var/lib/postgresql/data"
+
+  redis:
+    deploy:
+      resources:
+        limits:
+          cpus: "${DOCKER_REDIS_CPUS:-0}"
+          memory: "${DOCKER_REDIS_MEMORY:-0}"
+    env_file:
+      - ".env"
+    image: "redis:6.0.10-buster"
+    restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+    stop_grace_period: "3s"
+    volumes:
+      - "redis:/data"
+
+  web:
+    <<: *default-app
+    deploy:
+      resources:
+        limits:
+          cpus: "${DOCKER_WEB_CPUS:-0}"
+          memory: "${DOCKER_WEB_MEMORY:-0}"
+    healthcheck:
+      test: "${DOCKER_WEB_HEALTHCHECK_TEST:-curl localhost:8000/up}"
+      interval: "60s"
+      timeout: "3s"
+      start_period: "5s"
+      retries: 3
+    ports:
+      - "${DOCKER_WEB_PORT_FORWARD:-127.0.0.1:8000}:8000"
+
+  worker:
+    <<: *default-app
+    command: celery -A hello worker -l "${CELERY_LOG_LEVEL:-info}"
+    deploy:
+      resources:
+        limits:
+          cpus: "${DOCKER_WORKER_CPUS:-0}"
+          memory: "${DOCKER_WORKER_MEMORY:-0}"
+
+volumes:
+  postgres: {}
+  redis: {}

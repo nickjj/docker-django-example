@@ -1,0 +1,14 @@
+.git/
+.pytest_cache/
+.webpack_cache/
+__pycache__/
+assets/node_modules/
+public/
+public_collected/
+
+.coverage
+.dockerignore
+.env*
+!.env.example
+celerybeat-schedule
+docker-compose.override.yml

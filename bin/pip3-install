@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+pip3 install --no-warn-script-location --user -r requirements.txt
+
+# If requirements.txt is newer than the lock file or the lock file doesn't exist.
+if [ requirements.txt -nt requirements-lock.txt ]; then
+  pip3 freeze --user > requirements-lock.txt
+fi
+
+pip3 install --no-warn-script-location --user \
+  -r requirements.txt -c requirements-lock.txt
