@@ -1,0 +1,4 @@
+# TODO: This will block all robots from crawling your site. You probably don't
+# want this set in production, but could be useful for a test / staging server.
+User-agent: *
+Disallow: /
