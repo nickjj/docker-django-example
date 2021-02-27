@@ -29,12 +29,12 @@ function _build_run_down {
 # -----------------------------------------------------------------------------
 
 function cmd {
-  ## Run any command you want in the web container
+  # Run any command you want in the web container
   _dc web "${@}"
 }
 
 function manage {
-  ## Run any manage.py commands
+  # Run any manage.py commands
 
   # We need to collectstatic before we run our tests.
   if [ "${1-''}" == "test" ]; then
@@ -45,52 +45,52 @@ function manage {
 }
 
 function flake8 {
-  ## Lint Python code with flake8
+  # Lint Python code with flake8
   cmd flake8 "${@}"
 }
 
 function secret {
-  ## Generate a random secret that can be used for your SECRET_KEY and more
+  # Generate a random secret that can be used for your SECRET_KEY and more
   cmd python3 -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 }
 
 function bash {
-  ## Start a Bash session in the web container
+  # Start a Bash session in the web container
   cmd bash "${@}"
 }
 
 function psql {
-  ## Connect to PostgreSQL with psql
+  # Connect to PostgreSQL with psql
  _dc postgres psql -U "${APP_NAME}" "${@}"
 }
 
 function redis-cli {
-  ## Connect to Redis with redis-cli
+  # Connect to Redis with redis-cli
   _dc redis redis-cli "${@}"
 }
 
 function pip3:install {
-  ## Install pip3 dependencies and write lock file
+  # Install pip3 dependencies and write lock file
   _build_run_down web bash -c "cd .. && bin/pip3-install"
 }
 
 function pip3:outdated {
-  ## List any installed packages that are outdated
+  # List any installed packages that are outdated
   cmd pip3 list --outdated
 }
 
 function yarn:install {
-  ## Install yarn dependencies and write lock file
+  # Install yarn dependencies and write lock file
   _build_run_down webpack yarn install
 }
 
 function yarn:outdated {
-  ## List any installed packages that are outdated
+  # List any installed packages that are outdated
   _dc webpack yarn outdated
 }
 
 function clean {
-  ## Remove cache and other machine generates files
+  # Remove cache and other machine generates files
   rm -rf .pytest_cache/ .webpack_cache/ public*/* .coverage celerybeat-schedule
   touch public/.keep public_collected/.keep
 }

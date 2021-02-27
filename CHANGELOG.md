@@ -7,7 +7,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-- Nothing yet!
+### Changed
+
+- Replace `##` comments with `#` in the `run` script
 
 ## [0.1.0] - 2021-02-24
 
