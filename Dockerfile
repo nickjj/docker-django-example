@@ -45,8 +45,8 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man \
   && apt-get clean \
   && useradd --create-home python \
-  && mkdir -p /home/python/.cache/pip public /public_collected \
-  && chown python:python -R /home/python /app public /public_collected
+  && mkdir -p /public_collected public \
+  && chown python:python -R /public_collected /app
 
 USER python
 
