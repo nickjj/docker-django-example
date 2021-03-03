@@ -11,6 +11,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Replace `##` comments with `#` in the `run` script
 
+### Fixed
+
+- Make sure `public_collected/.keep` is never removed
+
 ## [0.1.0] - 2021-02-24
 
 ### Added
