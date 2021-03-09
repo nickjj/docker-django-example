@@ -5,7 +5,7 @@ var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 var TerserPlugin = require('terser-webpack-plugin');
 
-var node_modules_path = '/node_modules'
+var node_modules_path = '/node_modules';
 
 var common = {
   watchOptions: {
@@ -24,11 +24,11 @@ var common = {
         test: /\.js$/,
         exclude: [`/${node_modules_path}/`],
         use: [
-          {loader: "babel-loader"}
+          {loader: 'babel-loader'}
         ]
       },
       {
-        test: [/\.css$/],
+        test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
