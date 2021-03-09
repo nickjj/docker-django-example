@@ -436,11 +436,14 @@ couple of free and paid resources. There's Google too!
 - <https://docs.docker.com/>
 - <https://docs.djangoproject.com/en/3.1/>
 
-#### Courses
+#### Courses / books
 
 - [https://diveintodocker.com](https://diveintodocker.com?ref=docker-django-example)
   is a course I created which goes over the Docker and Docker Compose
   fundamentals
+- William Vincent has a bunch of [beginner and advanced Django
+  books](https://gumroad.com/a/139727987). He also co-hosts the [Django
+  Chat](https://djangochat.com/) podcast
 
 ### Deploy to production
 
