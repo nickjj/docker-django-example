@@ -2,7 +2,7 @@ var { merge } = require('webpack-merge');
 var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
-var OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+var CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 var TerserPlugin = require('terser-webpack-plugin');
 
 var node_modules_path = '/node_modules'
@@ -59,7 +59,7 @@ var common = {
   optimization: {
     minimizer: [
       new TerserPlugin(),
-      new OptimizeCSSAssetsPlugin({})
+      new CssMinimizerPlugin({})
     ]
   }
 };
