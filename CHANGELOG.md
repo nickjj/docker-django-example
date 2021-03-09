@@ -11,6 +11,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Replace `##` comments with `#` in the `run` script
 - Switch `OptimizeCSSAssetsPlugin` with `CssMinimizerPlugin` for Webpack 5
+- Replace deprecated Webpack 5 `file-loader` with `asset/resource`
 
 ### Removed
 

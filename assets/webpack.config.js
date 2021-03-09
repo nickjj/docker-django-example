@@ -36,24 +36,16 @@ var common = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
-        exclude: /fonts/,
-        use: [
-          {loader: 'file-loader?name=/images/[name].[ext]'}
-        ]
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
       {
-        test: /\.(ttf|eot|svg|woff2?)$/,
-        exclude: /images/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/',
-            publicPath: '../fonts'
-          }
-        }]
-      }
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
+        }
+      },
     ]
   },
   optimization: {
@@ -72,7 +64,8 @@ module.exports = [
     ],
     output: {
       path: __dirname + '/../public',
-      filename: 'js/app.js'
+      filename: 'js/app.js',
+      publicPath: '/'
     },
     resolve: {
       modules: [
