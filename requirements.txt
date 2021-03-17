@@ -7,4 +7,4 @@ psycopg2==2.8.6
 django-redis==4.12.1
 celery==5.0.5
 
-flake8==3.8.4
+flake8==3.9.0

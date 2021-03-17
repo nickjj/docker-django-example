@@ -12,6 +12,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Replace `##` comments with `#` in the `run` script
 - Switch `OptimizeCSSAssetsPlugin` with `CssMinimizerPlugin` for Webpack 5
 - Replace deprecated Webpack 5 `file-loader` with `asset/resource`
+- Update flake8 from `3.8.4` to `3.9.0`
 
 ### Removed
 
