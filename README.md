@@ -297,8 +297,8 @@ renaming a directory.
 grep -ER --exclude-dir public/ --exclude-dir public_collected/ hello .
 ```
 
-You should get back no output. That means all occurrences of hello and Hello
-were replaced.
+You should get back no output. That means all occurrences of hello were
+replaced.
 
 ```sh
 grep -ER --exclude README.md --exclude-dir .git/ --exclude-dir .webpack_cache/ \
