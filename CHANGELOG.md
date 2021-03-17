@@ -17,6 +17,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - Remove unnecessary `mkdir` for the pip cache dir and chown'ing a few directories
+- Unused `webpack` import in Webpack config
 
 ### Fixed
 

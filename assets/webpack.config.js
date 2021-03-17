@@ -1,5 +1,4 @@
 var { merge } = require('webpack-merge');
-var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 var CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
