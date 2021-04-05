@@ -10,13 +10,6 @@ var common = {
   watchOptions: {
     poll: (process.env.WEBPACK_WATCHER_POLL || 'false') === 'true'
   },
-  cache: {
-    type: 'filesystem',
-    cacheDirectory: __dirname + '/../.webpack_cache'
-  },
-  snapshot: {
-    managedPaths: [node_modules_path]
-  },
   module: {
     rules: [
       {

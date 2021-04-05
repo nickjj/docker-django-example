@@ -91,7 +91,7 @@ function yarn:outdated {
 
 function clean {
   # Remove cache and other machine generates files
-  rm -rf .pytest_cache/ .webpack_cache/ public*/* .coverage celerybeat-schedule
+  rm -rf .pytest_cache/ public*/* .coverage celerybeat-schedule
   touch public/.keep public_collected/.keep
 }
 
