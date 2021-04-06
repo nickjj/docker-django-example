@@ -9,6 +9,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
+- Update Django to `3.2`
 - Update TailwindCSS to `2.1.0` and enable the JIT compiler
 
 ### Removed
