@@ -89,7 +89,8 @@ not all) note worthy additions and changes.
 - **Config**:
     - Log to STDOUT so that Docker can consume and deal with log output 
     - Extract a bunch of configuration settings into environment variables
-    - `src/hello/settings.py` and the `.env` file handles configuration in all environments
+    - Rename project directory from its custom name to `config`
+    - `src/config/settings.py` and the `.env` file handles configuration in all environments
 - **Front-end assets**:
     - `assets/` contains all your CSS, JS, images, fonts, etc. and is managed by Webpack
     - Custom `502.html` and `maintenance.html` pages
@@ -281,15 +282,13 @@ lower=hello
 # Recursively replace hello using the values defined above.
 #
 # You don't need to edit this command before running it in your terminal.
-find . -type f -exec perl -i -pe "s/(hellodjango|hello)/${lower}/g" {} + \
-  && mv src/hello/ src/"${lower}"
+find . -type f -exec perl -i -pe "s/(hellodjango|hello)/${lower}/g" {} +
 ```
 
 If you're not comfortable running these commands or they don't work for
 whatever reason, you can also do a case sensitive find / replace within your
 code editor too. There's nothing special going on here. It's literally
-replacing "hellodjango" and "hello" with your lowercase app name and then
-renaming a directory.
+replacing "hellodjango" and "hello" with your lowercase app name.
 
 #### Verify everything was changed successfully:
 

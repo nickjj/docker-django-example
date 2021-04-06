@@ -7,7 +7,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-- Nothing yet!
+### Changed
+
+- Rename `src/hello/` directory to `src/config/` to be more portable
 
 ## [0.3.1] - 2021-04-06
 
