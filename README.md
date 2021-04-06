@@ -434,7 +434,7 @@ couple of free and paid resources. There's Google too!
 #### Official documentation 
 
 - <https://docs.docker.com/>
-- <https://docs.djangoproject.com/en/3.1/>
+- <https://docs.djangoproject.com/en/3.2/>
 
 #### Courses / books
 
