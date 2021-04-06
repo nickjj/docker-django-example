@@ -7,7 +7,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-- Nothing yet!
+### Fixed
+
+- Use `DEFAULT_AUTO_FIELD` in `settings.py` instead of the lowercase variant
 
 ## [0.3.0] - 2021-04-06
 
