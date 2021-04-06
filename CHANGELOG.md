@@ -7,7 +7,13 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-- Nothing yet!
+### Changed
+
+- Update TailwindCSS to `2.1.0` and enable the JIT compiler
+
+### Removed
+
+- Remove Webpack's cache since the JIT compiler is pretty speedy as is
 
 ## [0.2.0] - 2021-03-17
 
@@ -17,13 +23,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Switch `OptimizeCSSAssetsPlugin` with `CssMinimizerPlugin` for Webpack 5
 - Replace deprecated Webpack 5 `file-loader` with `asset/resource`
 - Update flake8 from `3.8.4` to `3.9.0`
-- Update TailwindCSS to `2.1.0` and enable the JIT compiler
 
 ### Removed
 
 - Remove unnecessary `mkdir` for the pip cache dir and chown'ing a few directories
 - Unused `webpack` import in Webpack config
-- Remove Webpack's cache since the JIT compiler is pretty speedy as is
 
 ### Fixed
 
