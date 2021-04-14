@@ -89,7 +89,7 @@ not all) note worthy additions and changes.
 - **Config**:
     - Log to STDOUT so that Docker can consume and deal with log output 
     - Extract a bunch of configuration settings into environment variables
-    - Rename project directory from its custom name to `config`
+    - Rename project directory from its custom name to `config/`
     - `src/config/settings.py` and the `.env` file handles configuration in all environments
 - **Front-end assets**:
     - `assets/` contains all your CSS, JS, images, fonts, etc. and is managed by Webpack

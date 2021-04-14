@@ -11,6 +11,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Rename `src/hello/` directory to `src/config/` to be more portable
 
+### Fixed
+
+- Set an empty ENTRYPOINT for the worker to avoid race conditions when copying static files
+
 ## [0.3.1] - 2021-04-06
 
 ### Fixed

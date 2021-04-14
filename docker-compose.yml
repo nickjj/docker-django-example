@@ -66,6 +66,7 @@ services:
   worker:
     <<: *default-app
     command: celery -A config worker -l "${CELERY_LOG_LEVEL:-info}"
+    entrypoint: []
     deploy:
       resources:
         limits:
