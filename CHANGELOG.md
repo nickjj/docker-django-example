@@ -10,6 +10,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Rename `src/hello/` directory to `src/config/` to be more portable
+- Replace `APP_NAME` in `run` script with `POSTGRES_USER` for connecting to psql
 
 ### Fixed
 

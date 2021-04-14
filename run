@@ -3,7 +3,6 @@
 set -eo pipefail
 
 DC="${DC:-exec}"
-APP_NAME="${APP_NAME:-hello}"
 
 # If we're running in CI we need to disable TTY allocation for docker-compose
 # commands that enable it by default, such as exec and run.
@@ -61,7 +60,9 @@ function bash {
 
 function psql {
   # Connect to PostgreSQL with psql
- _dc postgres psql -U "${APP_NAME}" "${@}"
+  # shellcheck disable=SC1091
+  . .env
+ _dc postgres psql -U "${POSTGRES_USER}" "${@}"
 }
 
 function redis-cli {
