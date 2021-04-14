@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -eo pipefail
 
 DC="${DC:-exec}"
 APP_NAME="${APP_NAME:-hello}"
