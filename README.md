@@ -253,8 +253,8 @@ updated. The easiest way to do that is by removing the old Docker resources and
 deleting the database. We can do all of that in 1 command.
 
 *Don't worry, you won't have to wait 5-10 minutes again when you up your newly
-named project. Docker still that information safely tucked away and it can be
-re-used in projects with different names.*
+named project. Docker still has that information safely tucked away and it can
+be re-used in projects with different names.*
 
 ```sh
 # This removes the PostgreSQL database volume along with a few other Docker
@@ -262,75 +262,44 @@ re-used in projects with different names.*
 docker-compose down -v
 ```
 
-#### Run these commands from the same directory as this git repo:
+#### Run the customize script included in this repo:
+
+You should run [this
+script](https://github.com/nickjj/docker-django-example/blob/main/run) from
+inside of this git repo. It's going to:
+
+- Perform a number of find / replace actions
+- Optionally initialize a new git repo for you
+
+*Afterwards you can delete this script because its only purpose is to assist in
+helping you customize this project's name without depending on any complicated
+project generator tools or 3rd party dependencies.*
 
 ```sh
-# Change hello to be whatever you want your app name to be.
+# The script takes 2 arguments.
 #
-# After renaming this value, paste this variable into your terminal.
-lower=hello
-
-# If you wanted a multi-word app name you could do:
-# lower=my_app
+# The first one is the lower case version of your app's name, such as myapp or
+# my_app depending on your preference.
 #
-# or:
-#
-# lower=myapp
-#
-# The choice is yours!
-
-# Recursively replace hello using the values defined above.
-#
-# You don't need to edit this command before running it in your terminal.
-find . -type f -exec perl -i -pe "s/(hellodjango|hello)/${lower}/g" {} +
+# The second one is used for your app's module name. For example if you used
+# myapp or my_app for the first argument you would want to use MyApp here.
+./customize myapp MyApp
 ```
 
-If you're not comfortable running these commands or they don't work for
-whatever reason, you can also do a case sensitive find / replace within your
-code editor too. There's nothing special going on here. It's literally
-replacing "hellodjango" and "hello" with your lowercase app name.
-
-#### Verify everything was changed successfully:
-
-```sh
-grep -ER --exclude-dir public/ --exclude-dir public_collected/ hello .
-```
-
-You should get back no output. That means all occurrences of hello were
-replaced.
-
-```sh
-grep -ER --exclude README.md --exclude-dir .git/ --exclude-dir \
-  --exclude-dir assets/node_modules/ \
-  --exclude-dir public/ --exclude-dir public_collected/ "${lower}" .
-```
-
-You should get back a bunch of output showing you where your app name is
-referenced within the project.
-
-#### Remove the `.git` directory and init a new git repo:
-
-This project is not meant to be a long running fork. It's your freshly minted
-project that is ready for you to start modifying based on whatever cool app you
-want to build.
-
-```sh
-rm -rf .git/
-git init
-
-# Optionally use main as a branch instead of master. CI is configured to work
-# with both main and master btw.
-git symbolic-ref HEAD refs/heads/main
-```
+If you're not comfy running the script or it doesn't work for whatever reasons
+you can [check it
+out](https://github.com/nickjj/docker-django-example/blob/main/run) and
+perform the actions manually. It's mostly running a find / replace across files
+and then renaming a few directories and files.
 
 #### Start and setup the project:
 
-We don't need to rebuild anything yet. Upping it is enough for Docker to
-re-create new resources with the new name. We'll also need to setup our
-database since a new one will be created for us by Docker.
+This won't take as long as before because Docker can re-use most things. We'll
+also need to setup our database since a new one will be created for us by
+Docker.
 
 ```sh
-docker-compose up
+docker-compose up --build
 
 # Then in a 2nd terminal once it's up and ready.
 ./run manage migrate
