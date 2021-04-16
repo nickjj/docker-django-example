@@ -60,9 +60,7 @@ Your project has been renamed successfully!
 EOF
 
 function init_git_repo {
-  [ ! -d .git/ ] && return 0
-
-  rm -rf .git/
+  [ -d .git/ ] && rm -rf .git/
 
 cat << EOF
 
