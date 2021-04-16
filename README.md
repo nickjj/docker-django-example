@@ -26,7 +26,7 @@ updated every time I bump the versions:
 - [Files of interest](#files-of-interest)
   - [`.env`](#env)
   - [`run`](#run)
-- [Making this app your own](#making-this-app-your-own)
+- [Running a script to automate renaming the project](#running-a-script-to-automate-renaming-the-project)
 - [Updating dependencies](#updating-dependencies)
 - [See a way to improve something?](#see-a-way-to-improve-something)
 - [Additional resources](#additional-resources)
@@ -233,47 +233,16 @@ functions as you want. This file's purpose is to make your experience better!
 `alias run=./run` in your `~/.bash_aliases` or equivalent file. Then you'll be
 able to run `run` instead of `./run`.*
 
-## Making this app your own
+## Running a script to automate renaming the project
 
 The app is named `hello` right now but chances are your app will be a different
 name. Since the app is already created we'll need to do a find / replace on a
 few variants of the string "hello" and update a few Docker related resources.
 
-You can do that from the command line without needing to install any extra
-dependencies by following the instructions below.
+And by we I mean I created a zero dependency shell script that does all of the
+heavy lifting for you. All you have to do is run the script below.
 
-#### Remove the original Docker resources:
-
-When the hello app was first upped with Docker Compose a new database, user and
-password was created automatically based on the values of certain environment
-variables.
-
-Along with that a few Docker resources were created too. Those need to be
-updated. The easiest way to do that is by removing the old Docker resources and
-deleting the database. We can do all of that in 1 command.
-
-*Don't worry, you won't have to wait 5-10 minutes again when you up your newly
-named project. Docker still has that information safely tucked away and it can
-be re-used in projects with different names.*
-
-```sh
-# This removes the PostgreSQL database volume along with a few other Docker
-# resources that were created and are associated to the hello app.
-docker-compose down -v
-```
-
-#### Run the customize script included in this repo:
-
-You should run [this
-script](https://github.com/nickjj/docker-django-example/blob/main/customize)
-from inside of this git repo. It's going to:
-
-- Perform a number of find / replace actions
-- Optionally initialize a new git repo for you
-
-*Afterwards you can delete this script because its only purpose is to assist in
-helping you customize this project's name without depending on any complicated
-project generator tools or 3rd party dependencies.*
+#### Run the rename-project script included in this repo:
 
 ```sh
 # The script takes 2 arguments.
@@ -283,14 +252,26 @@ project generator tools or 3rd party dependencies.*
 #
 # The second one is used for your app's module name. For example if you used
 # myapp or my_app for the first argument you would want to use MyApp here.
-./customize myapp MyApp
+bin/rename-project myapp MyApp
 ```
+
+The [bin/rename-project
+script](https://github.com/nickjj/docker-django-example/blob/main/bin/rename-project)
+is going to:
+
+- Remove any Docker resources for your current project
+- Perform a number of find / replace actions
+- Optionally initialize a new git repo for you
 
 If you're not comfy running the script or it doesn't work for whatever reasons
 you can [check it
-out](https://github.com/nickjj/docker-django-example/blob/main/customize) and
-perform the actions manually. It's mostly running a find / replace across files
-and then renaming a few directories and files.
+out](https://github.com/nickjj/docker-django-example/blob/main/bin/rename-project)
+and perform the actions manually. It's mostly running a find / replace across
+files and then renaming a few directories and files.
+
+*Afterwards you can delete this script because its only purpose is to assist in
+helping you change this project's name without depending on any complicated
+project generator tools or 3rd party dependencies.*
 
 #### Start and setup the project:
 
