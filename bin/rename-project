@@ -46,9 +46,9 @@ done
 # The core of the script which renames a few things.
 # -----------------------------------------------------------------------------
 find . -type f -exec \
-  perl -i -pe "s/(${FIND_APP_NAME}${FIND_FRAMEWORK}|${FIND_APP_NAME})/${APP_NAME}/g" {} + \
-  && find . -type f -exec \
-    perl -i -pe "s/${FIND_MODULE_NAME}/${MODULE_NAME}/g" {} +
+  perl -i \
+    -pe "s/(${FIND_APP_NAME}${FIND_FRAMEWORK}|${FIND_APP_NAME})/${APP_NAME}/g;" \
+    -pe "s/${FIND_MODULE_NAME}/${MODULE_NAME}/g;" {} +
 # -----------------------------------------------------------------------------
 
 cat << EOF
