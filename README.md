@@ -263,15 +263,15 @@ is going to:
 - Perform a number of find / replace actions
 - Optionally initialize a new git repo for you
 
+*Afterwards you can delete this script because its only purpose is to assist in
+helping you change this project's name without depending on any complicated
+project generator tools or 3rd party dependencies.*
+
 If you're not comfy running the script or it doesn't work for whatever reasons
 you can [check it
 out](https://github.com/nickjj/docker-django-example/blob/main/bin/rename-project)
 and perform the actions manually. It's mostly running a find / replace across
 files and then renaming a few directories and files.
-
-*Afterwards you can delete this script because its only purpose is to assist in
-helping you change this project's name without depending on any complicated
-project generator tools or 3rd party dependencies.*
 
 #### Start and setup the project:
 
