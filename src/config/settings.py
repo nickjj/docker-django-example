@@ -115,9 +115,7 @@ CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": REDIS_URL,
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient"
-        }
+        "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient"},
     }
 }
 
@@ -137,9 +135,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [
-    "/public",
-    os.path.join(BASE_DIR, "..", "public")
-]
+STATICFILES_DIRS = ["/public", os.path.join(BASE_DIR, "..", "public")]
 STATIC_ROOT = "/public_collected"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
