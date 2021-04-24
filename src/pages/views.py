@@ -2,10 +2,10 @@ import os
 
 from django import get_version
 from django.conf import settings
+from django.db import connection
 from django.http import HttpResponse
 from django.shortcuts import render
 from django_redis import get_redis_connection
-from django.db import connection
 
 
 def home(request):
