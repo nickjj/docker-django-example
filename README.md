@@ -181,6 +181,13 @@ a few more seconds and reload. It should self resolve.
 ./run flake8
 ```
 
+#### Formatting the code base:
+
+```sh
+# You should see that everything is unchanged (it's all already formatted).
+./run black
+```
+
 #### Running the test suite:
 
 ```sh
@@ -295,6 +302,7 @@ adding custom changes.
 ```sh
 # You can run this from the same terminal as before.
 ./run flake8
+./run black
 ./run manage test
 ```
 
