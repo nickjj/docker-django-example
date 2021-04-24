@@ -82,8 +82,9 @@ not all) note worthy additions and changes.
 - **Packages and extensions**:
     - *[gunicorn](https://gunicorn.org/)* for an app server in both development and production
     - *[whitenoise](https://github.com/evansd/whitenoise)* for serving static files
-- **Linting and testing**:
+- **Linting and formatting**:
     - *[flake8](https://github.com/PyCQA/flake8)* is used to lint the code base
+    - *[black](https://github.com/psf/black)* is used to format the code base
 - **Django apps**:
     - Add `pages` app with a `/` page and `/up` health check endpoint
 - **Config**:
