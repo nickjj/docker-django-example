@@ -10,6 +10,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - `bin/rename-project` script to assist with renaming the project
+- Use Black to format Python code
 
 ### Changed
 

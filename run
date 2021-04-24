@@ -48,6 +48,11 @@ function flake8 {
   cmd flake8 "${@}"
 }
 
+function black {
+  # Format Python code with black
+  cmd black . "${@}"
+}
+
 function secret {
   # Generate a random secret that can be used for your SECRET_KEY and more
   cmd python3 -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
@@ -125,6 +130,7 @@ function ci:test {
     psql -U ${POSTGRES_USER} ${POSTGRES_USER} -c 'SELECT 1'"
 
   flake8 "${@}"
+  black --check
   manage migrate
   manage test
 }

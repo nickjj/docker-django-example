@@ -1,2 +1,2 @@
 [flake8]
-# TODO: Add any custom flake8 linting rules here.
+extend-ignore = E203, W503
