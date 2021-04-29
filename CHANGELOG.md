@@ -19,6 +19,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Avoid using multi-line imports with commas or parenthesis
 - Update Tailwind from `2.1.0` to `2.1.2`
 - Update all Webpack related dependencies to their latest versions
+- Use the Docker Compose spec in `docker-compose.yml` (removes `version:` property)
 
 ### Fixed
 
