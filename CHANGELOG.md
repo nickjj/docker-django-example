@@ -17,6 +17,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Rename `src/hello/` directory to `src/config/` to be more portable
 - Replace `APP_NAME` in `run` script with `POSTGRES_USER` for connecting to psql
 - Avoid using multi-line imports with commas or parenthesis
+- Update Tailwind from `2.1.0` to `2.1.2`
+- Update all Webpack related dependencies to their latest versions
 
 ### Fixed
 
