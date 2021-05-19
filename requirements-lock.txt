@@ -8,9 +8,9 @@ click==7.1.2
 click-didyoumean==0.0.3
 click-plugins==1.1.1
 click-repl==0.1.6
-Django==3.2
+Django==3.2.3
 django-redis==4.12.1
-flake8==3.9.0
+flake8==3.9.2
 gunicorn==20.1.0
 kombu==5.0.2
 mccabe==0.6.1
@@ -23,11 +23,11 @@ pyflakes==2.3.1
 pytz==2021.1
 redis==3.5.3
 regex==2021.4.4
-six==1.15.0
+six==1.16.0
 sqlparse==0.4.1
 toml==0.10.2
 typed-ast==1.4.3
-typing-extensions==3.7.4.3
+typing-extensions==3.10.0.0
 vine==5.0.0
 wcwidth==0.2.5
 whitenoise==5.2.0
