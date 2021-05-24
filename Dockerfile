@@ -58,6 +58,7 @@ RUN chmod 0755 bin/* && bin/pip3-install
 ARG DEBUG="false"
 ENV DEBUG="${DEBUG}" \
     PYTHONUNBUFFERED="true" \
+    PYTHONPATH="." \
     PATH="${PATH}:/home/python/.local/bin" \
     USER="python"
 
