@@ -6,6 +6,8 @@ services:
       args:
         - "NODE_ENV=${NODE_ENV:-production}"
     command: "yarn run watch"
+    depends_on:
+      - "web"
     env_file:
       - ".env"
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"

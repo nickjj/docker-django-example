@@ -33,6 +33,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Set an empty ENTRYPOINT for the worker to avoid race conditions when copying static files
 - Fix `run` script error for unbound variable in older versions of Bash on macOS
+- Potential issue on Mac M1s by adding `depends_on` to Webpack service
 
 ## [0.3.1] - 2021-04-06
 
