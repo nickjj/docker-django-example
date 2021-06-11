@@ -19,6 +19,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Replace `APP_NAME` in `run` script with `POSTGRES_USER` for connecting to psql
 - Avoid using multi-line imports with commas or parenthesis
 - Update PostgreSQL from `13.2` to `13.3`
+- Update Redis from `6.0.10` to `6.2.4`
 - Update Tailwind from `2.1.0` to `2.1.2`
 - Update Django from `3.2` to `3.2.3`
 - Update Celery from `5.0.5` to `5.1.0`

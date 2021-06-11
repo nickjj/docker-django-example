@@ -39,7 +39,7 @@ services:
           memory: "${DOCKER_REDIS_MEMORY:-0}"
     env_file:
       - ".env"
-    image: "redis:6.0.10-buster"
+    image: "redis:6.2.4-buster"
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"
     volumes:
