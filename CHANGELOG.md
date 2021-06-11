@@ -18,6 +18,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Rename `src/hello/` directory to `src/config/` to be more portable
 - Replace `APP_NAME` in `run` script with `POSTGRES_USER` for connecting to psql
 - Avoid using multi-line imports with commas or parenthesis
+- Update Python from `3.9.2` to `3.9.5`
 - Update PostgreSQL from `13.2` to `13.3`
 - Update Redis from `6.0.10` to `6.2.4`
 - Update Tailwind from `2.1.0` to `2.1.2`
