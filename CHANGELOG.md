@@ -22,7 +22,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update PostgreSQL from `13.2` to `13.3`
 - Update Redis from `6.0.10` to `6.2.4`
 - Update Tailwind from `2.1.0` to `2.1.2`
-- Update Django from `3.2` to `3.2.3`
+- Update Django from `3.2` to `3.2.4`
+- Update django-redis from `4.12.1` to `5.0.0`
 - Update Celery from `5.0.5` to `5.1.0`
 - Update flake8 from `3.9.0` to `3.9.2`
 - Update all Webpack related dependencies to their latest versions

@@ -7,9 +7,9 @@ celery==5.1.0
 click==7.1.2
 click-didyoumean==0.0.3
 click-plugins==1.1.1
-click-repl==0.1.6
-Django==3.2.3
-django-redis==4.12.1
+click-repl==0.2.0
+Django==3.2.4
+django-redis==5.0.0
 flake8==3.9.2
 gunicorn==20.1.0
 kombu==5.1.0
