@@ -11,6 +11,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Update Celery from `5.1.0` to `5.1.1`
 - Update psycopg2 from `2.8.6` to `2.9.1`
+- Update all Webpack related dependencies to their latest versions
 
 ## [0.4.0] - 2021-06-11
 
