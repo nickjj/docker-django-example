@@ -60,7 +60,7 @@ mostly Jinja templates with sprinkles of JS or an API back-end.
 This isn't an exhaustive list but here's a few reasonable choices depending on
 how you're building your app:
 
-- <https://hotwire.dev/>
+- <https://hotwired.dev/>
 - <https://github.com/alpinejs/alpine>
 - <https://vuejs.org/>
 - <https://reactjs.org/>
