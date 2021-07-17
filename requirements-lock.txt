@@ -1,14 +1,14 @@
 amqp==5.0.6
 appdirs==1.4.4
-asgiref==3.3.4
+asgiref==3.4.1
 billiard==3.6.4.0
 black==20.8b1
-celery==5.1.1
+celery==5.1.2
 click==7.1.2
 click-didyoumean==0.0.3
 click-plugins==1.1.1
 click-repl==0.2.0
-Django==3.2.4
+Django==3.2.5
 django-redis==5.0.0
 flake8==3.9.2
 gunicorn==20.1.0
@@ -22,7 +22,7 @@ pycodestyle==2.7.0
 pyflakes==2.3.1
 pytz==2021.1
 redis==3.5.3
-regex==2021.4.4
+regex==2021.7.6
 six==1.16.0
 sqlparse==0.4.1
 toml==0.10.2
@@ -30,4 +30,4 @@ typed-ast==1.4.3
 typing-extensions==3.10.0.0
 vine==5.0.0
 wcwidth==0.2.5
-whitenoise==5.2.0
+whitenoise==5.3.0
