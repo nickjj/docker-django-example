@@ -12,21 +12,23 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Back-end packages
 
 - Update `celery` to `5.1.2`
-- Update `Django` to `3.2.5`
+- Update `Django` to `3.2.6`
 - Update `psycopg2` to `2.9.1`
 - Update `whitenoise` to `5.3.0`
 
 #### Front-end packages
 
-- Update `@babel/preset-env` to `7.14.7`
+- Update `@babel/core` to `7.15.0`
+- Update `@babel/preset-env` to `7.15.0`
 - Update `autoprefixer` to `10.3.1`
 - Update `copy-webpack-plugin` to `9.0.1`
-- Update `css-loader` to `6.1.0`
+- Update `css-loader` to `6.2.0`
 - Update `css-minimizer-webpack-plugin` to `3.0.2`
-- Update `mini-css-extract-plugin` to `2.1.0`
+- Update `mini-css-extract-plugin` to `2.2.0`
 - Update `postcss-loader` to `6.1.1`
-- Update `tailwindcss` to `2.2.4`
-- Update `webpack` to `5.45.1`
+- Update `postcss` to `8.3.6`
+- Update `tailwindcss` to `2.2.7`
+- Update `webpack` to `5.48.0`
 
 ## [0.4.0] - 2021-06-11
 
