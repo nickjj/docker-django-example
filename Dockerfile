@@ -1,4 +1,4 @@
-FROM node:14.15.5-buster-slim AS webpack
+FROM node:14.17.5-bullseye-slim AS webpack
 LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app/assets
@@ -33,9 +33,9 @@ RUN if [ "${NODE_ENV}" != "development" ]; then \
 
 CMD ["bash"]
 
-#
+###############################################################################
 
-FROM python:3.9.5-slim-buster AS app
+FROM python:3.9.6-slim-bullseye AS app
 LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app

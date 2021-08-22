@@ -9,6 +9,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
+#### Languages and services
+
+- Update `Python` to `3.9.6` and switch to Debian Bullseye Slim
+
 #### Back-end packages
 
 - Update `celery` to `5.1.2`
