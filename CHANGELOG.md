@@ -12,7 +12,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Languages and services
 
 - Update `Python` to `3.10.0` and switch to Debian Bullseye Slim
-- Update `Redis` to `6.2.5`
+- Update `Redis` to `6.2.6`
 
 #### Back-end packages
 
