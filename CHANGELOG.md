@@ -17,7 +17,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end packages
 
-- Update `Django` to `3.2.7`
+- Update `Django` to `3.2.8`
 - Update `celery` to `5.1.2`
 - Update `psycopg2` to `2.9.1`
 - Update `whitenoise` to `5.3.0`
