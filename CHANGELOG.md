@@ -13,6 +13,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Update `Node` to `14.18.1`
 
+#### Back-end packages
+
+- Update `Django` to `3.2.9`
+- Update `flake8` to `4.0.1`
+
 ### Added
 
 - Lint Dockerfile with <https://github.com/hadolint/hadolint>
