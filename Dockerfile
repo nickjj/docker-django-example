@@ -1,4 +1,4 @@
-FROM node:14.17.5-bullseye-slim AS webpack
+FROM node:14.18.1-bullseye-slim AS webpack
 LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app/assets
