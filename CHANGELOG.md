@@ -16,7 +16,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Back-end packages
 
 - Update `Django` to `3.2.9`
+- Update `celery` to `5.2.1`
 - Update `flake8` to `4.0.1`
+- Update `psycopg2` to `2.9.2`
+- Update `redis` to `4.0.2`
 
 #### Front-end packages
 
