@@ -24,17 +24,19 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Front-end packages
 
 - Update `@babel/core` to `7.16.0`
-- Update `@babel/preset-env` to `7.16.0`
+- Update `@babel/preset-env` to `7.16.4`
 - Update `@babel/register` to `7.16.0`
 - Update `autoprefixer` to `10.4.0`
 - Update `babel-loader` to `8.2.3`
+- Update `copy-webpack-plugin` to `10.0.0`
 - Update `css-loader` to `6.5.1`
-- Update `mini-css-extract-plugin` to `2.4.4`
-- Update `postcss-loader` to `6.2.0`
-- Update `postcss` to `8.3.11`
+- Update `css-minimizer-webpack-plugin` to `3.2.0`
+- Update `mini-css-extract-plugin` to `2.4.5`
+- Update `postcss-loader` to `6.2.1`
+- Update `postcss` to `8.4.3`
 - Update `tailwindcss` to `2.2.19`
 - Update `webpack-cli` to `4.9.1`
-- Update `webpack` to `5.62.1`
+- Update `webpack` to `5.64.4`
 
 ### Added
 
