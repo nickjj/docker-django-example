@@ -12,6 +12,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Languages and services
 
 - Update `Node` to `14.18.1`
+- Update `PostgreSQL` to `14.1` and switch to Debian Bullseye Slim
+- Update `Redis` to switch to Debian Bullseye Slim
 
 #### Back-end packages
 
