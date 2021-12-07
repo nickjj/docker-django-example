@@ -7,6 +7,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- Lint Dockerfile with <https://github.com/hadolint/hadolint>
+- `redis` package to fulfill Django 4.x's Redis cache back-end requirements
+
 ### Changed
 
 #### Languages and services
@@ -17,7 +22,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end packages
 
-- Update `Django` to `3.2.9`
+- Update `Django` to `4.0`
 - Update `celery` to `5.2.1`
 - Update `flake8` to `4.0.1`
 - Update `psycopg2` to `2.9.2`
@@ -40,9 +45,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `webpack-cli` to `4.9.1`
 - Update `webpack` to `5.64.4`
 
-### Added
+### Removed
 
-- Lint Dockerfile with <https://github.com/hadolint/hadolint>
+- `django-redis` package since Django 4.x supports using Redis as a cache back-end now
+
 
 ## [0.5.0] - 2021-10-10
 

@@ -5,7 +5,10 @@ from django.conf import settings
 from django.db import connection
 from django.http import HttpResponse
 from django.shortcuts import render
-from django_redis import get_redis_connection
+from redis import Redis
+
+
+redis = Redis.from_url(settings.REDIS_URL)
 
 
 def home(request):
@@ -19,7 +22,7 @@ def home(request):
 
 
 def up(request):
-    get_redis_connection().ping()
+    redis.ping()
     connection.ensure_connection()
 
     return HttpResponse("")
