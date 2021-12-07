@@ -7,6 +7,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+- Nothing yet!
+
+## [0.6.0] - 2021-12-07
+
 ### Added
 
 - Lint Dockerfile with <https://github.com/hadolint/hadolint>
@@ -48,7 +52,6 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - `django-redis` package since Django 4.x supports using Redis as a cache back-end now
-
 
 ## [0.5.0] - 2021-10-10
 
@@ -155,7 +158,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Everything!
 
-[Unreleased]: https://github.com/nickjj/docker-django-example/compare/0.5.0...HEAD
+[Unreleased]: https://github.com/nickjj/docker-django-example/compare/0.6.0...HEAD
+[0.6.0]: https://github.com/nickjj/docker-django-example/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/nickjj/docker-django-example/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/nickjj/docker-django-example/compare/0.3.1...0.4.0
 [0.3.1]: https://github.com/nickjj/docker-django-example/compare/0.3.0...0.3.1
