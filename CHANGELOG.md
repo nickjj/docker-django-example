@@ -7,7 +7,13 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-- Nothing yet!
+### Changed
+
+#### Front-end packages
+
+- Update `postcss` to `8.4.4`
+- Update `tailwindcss` to `3.0.0`
+- Update `webpack` to `5.65.0`
 
 ## [0.6.0] - 2021-12-07
 
