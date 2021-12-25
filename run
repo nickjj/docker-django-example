@@ -135,7 +135,7 @@ function ci:install-deps {
   # Install Continuous Integration (CI) dependencies
   sudo apt-get install -y curl shellcheck
   sudo curl \
-    -L https://raw.githubusercontent.com/nickjj/wait-until/v0.1.2/wait-until \
+    -L https://raw.githubusercontent.com/nickjj/wait-until/v0.2.0/wait-until \
     -o /usr/local/bin/wait-until && sudo chmod +x /usr/local/bin/wait-until
 }
 
