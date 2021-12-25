@@ -56,7 +56,7 @@ out for something else on your own.
 
 Picking a JS library is a very app specific decision because it depends on
 which library you like and it also depends on if your app is going to be
-mostly Jinja templates with sprinkles of JS or an API back-end.
+mostly Django templates with sprinkles of JS or an API back-end.
 
 This isn't an exhaustive list but here's a few reasonable choices depending on
 how you're building your app:
