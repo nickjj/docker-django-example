@@ -1,17 +1,22 @@
+x-assets: &default-assets
+  build:
+    context: "."
+    target: "assets"
+    args:
+      - "NODE_ENV=${NODE_ENV:-production}"
+  env_file:
+    - ".env"
+  restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+  stop_grace_period: "3s"
+  tty: true
+  volumes:
+    - ".:/app"
+
 services:
-  webpack:
-    build:
-      context: "."
-      target: "webpack"
-      args:
-        - "NODE_ENV=${NODE_ENV:-production}"
-    command: "yarn run watch"
-    depends_on:
-      - "web"
-    env_file:
-      - ".env"
-    restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
-    stop_grace_period: "3s"
-    tty: true
-    volumes:
-      - ".:/app"
+  js:
+    <<: *default-assets
+    command: "../run yarn:build:js"
+
+  css:
+    <<: *default-assets
+    command: "../run yarn:build:css"

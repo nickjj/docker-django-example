@@ -1,6 +1,5 @@
 .git/
 .pytest_cache/
-.webpack_cache/
 __pycache__/
 assets/node_modules/
 public/

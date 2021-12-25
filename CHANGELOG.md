@@ -7,13 +7,28 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- `/node_modules/.bin` to `$PATH` to easier access Yarn installed binaries
+- `yarn:build:js` and `yarn:build:css` run script commands
+
 ### Changed
+
+- Update `assets/tailwind.config.js` based on the new TailwindCSS v3 defaults
+- Replace all traces of Webpack with esbuild
+- Move JS and CSS from `assets/app` to `assets/js` and `assets/css`
+- Rename `webpack` Docker build stage to `assets`
+- Copy all files into the `assets` build stage to simplify things
+- Replace `cp -a` with `cp -r` in Docker entrypoint to make it easier to delete older assets
+
+#### Languages and services
+
+- Update `Node` to `16.13.1`
 
 #### Front-end packages
 
-- Update `postcss` to `8.4.4`
-- Update `tailwindcss` to `3.0.0`
-- Update `webpack` to `5.65.0`
+- Update `postcss` to `8.4.5`
+- Update `tailwindcss` to `3.0.7`
 
 ## [0.6.0] - 2021-12-07
 

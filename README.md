@@ -48,7 +48,7 @@ out for something else on your own.
 
 ### Front-end
 
-- [Webpack](https://webpack.js.org/)
+- [esbuild](https://esbuild.github.io/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Heroicons](https://heroicons.com/)
 
@@ -62,14 +62,15 @@ This isn't an exhaustive list but here's a few reasonable choices depending on
 how you're building your app:
 
 - <https://hotwired.dev/>
+- <https://htmx.org/>
 - <https://github.com/alpinejs/alpine>
 - <https://vuejs.org/>
 - <https://reactjs.org/>
 - <https://jquery.com/>
 
-On the bright side with Webpack being set up you can use any (or none) of these
-solutions very easily. You could follow a specific library's Webpack
-installation guides to get up and running in no time.
+On the bright side with esbuild being set up you can use any (or none) of these
+solutions very easily. You could follow a specific library's installation
+guides to get up and running in no time.
 
 Personally I'm going to be using Hotwire Turbo + Stimulus in most newer
 projects.
@@ -94,7 +95,7 @@ not all) note worthy additions and changes.
     - Rename project directory from its custom name to `config/`
     - `src/config/settings.py` and the `.env` file handles configuration in all environments
 - **Front-end assets**:
-    - `assets/` contains all your CSS, JS, images, fonts, etc. and is managed by Webpack
+    - `assets/` contains all your CSS, JS, images, fonts, etc. and is managed by esbuild
     - Custom `502.html` and `maintenance.html` pages
     - Generate favicons using modern best practices
 - **Django defaults that are changed**:
@@ -171,9 +172,6 @@ in the `.env` file for the `DOCKER_WEB_PORT_FORWARD` variable to fix this.
 #### Check it out in a browser:
 
 Visit <http://localhost:8000> in your favorite browser.
-
-Not seeing any CSS? That means Webpack is still compiling. Give it
-a few more seconds and reload. It should self resolve.
 
 #### Linting the code base:
 

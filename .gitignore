@@ -3,7 +3,6 @@
 
 ### App #######################################################################
 
-.webpack_cache/
 public/*
 !public/.keep
 public_collected/*

@@ -93,17 +93,41 @@ function pip3:outdated {
 
 function yarn:install {
   # Install yarn dependencies and write lock file
-  _build_run_down webpack yarn install
+  _build_run_down js yarn install
 }
 
 function yarn:outdated {
   # List any installed packages that are outdated
-  _dc webpack yarn outdated
+  _dc js yarn outdated
+}
+
+function yarn:build:js {
+  # Build JS assets, this is meant to be run from within the assets container
+  mkdir -p ../public/js
+  node esbuild.config.js
+}
+
+function yarn:build:css {
+  # Build CSS assets, this is meant to be run from within the assets container
+  local args=()
+
+  if [ "${NODE_ENV}" == "production" ]; then
+    args=(--minify)
+  else
+    args=(--watch)
+  fi
+
+  mkdir -p ../public/css
+  DEBUG=0 tailwindcss --postcss -i css/app.css -o ../public/css/app.css "${args[@]}"
 }
 
 function clean {
   # Remove cache and other machine generates files
-  rm -rf .pytest_cache/ public*/* .coverage celerybeat-schedule
+  rm -rf public/*.* public/admin public/js public/css public/images public/fonts \
+    public_collected/*.* public_collected/admin public_collected/js \
+    public_collected/css public_collected/images public_collected/fonts \
+    .pytest_cache/ .coverage celerybeat-schedule
+
   touch public/.keep public_collected/.keep
 }
 
