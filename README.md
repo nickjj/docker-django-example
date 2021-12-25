@@ -177,14 +177,14 @@ Visit <http://localhost:8000> in your favorite browser.
 
 ```sh
 # You should get no output (that means everything is operational).
-./run flake8
+./run lint
 ```
 
 #### Formatting the code base:
 
 ```sh
 # You should see that everything is unchanged (it's all already formatted).
-./run black
+./run format
 ```
 
 #### Running the test suite:
@@ -301,8 +301,8 @@ adding custom changes.
 
 ```sh
 # You can run this from the same terminal as before.
-./run flake8
-./run black
+./run lint
+./run format
 ./run manage test
 ```
 

@@ -43,19 +43,19 @@ function manage {
   cmd python3 manage.py "${@}"
 }
 
-function hadolint {
-  # Lint Dockerfile with hadolint
+function lint:dockerfile {
+  # Lint Dockerfile
   docker container run --rm -i \
     hadolint/hadolint hadolint --ignore DL3008 "${@}" - < Dockerfile
 }
 
-function flake8 {
-  # Lint Python code with flake8
-  cmd flake8 "${@}"
+function lint {
+  # Lint Python code
+  cmd lint "${@}"
 }
 
-function black {
-  # Format Python code with black
+function format {
+  # Format Python code
   cmd black . "${@}"
 }
 
@@ -64,20 +64,20 @@ function secret {
   cmd python3 -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 }
 
-function bash {
-  # Start a Bash session in the web container
+function shell {
+  # Start a shell session in the web container
   cmd bash "${@}"
 }
 
 function psql {
-  # Connect to PostgreSQL with psql
+  # Connect to PostgreSQL
   # shellcheck disable=SC1091
   . .env
  _dc postgres psql -U "${POSTGRES_USER}" "${@}"
 }
 
 function redis-cli {
-  # Connect to Redis with redis-cli
+  # Connect to Redis
   _dc redis redis-cli "${@}"
 }
 
@@ -146,7 +146,7 @@ function ci:test {
   #   - https://github.com/koalaman/shellcheck
   #   - https://github.com/nickjj/wait-until
   shellcheck run bin/*
-  hadolint "${@}"
+  lint:dockerfile "${@}"
 
   cp --no-clobber .env.example .env
   cp --no-clobber docker-compose.override.yml.example docker-compose.override.yml
@@ -160,8 +160,8 @@ function ci:test {
     -e PGPASSWORD=${POSTGRES_PASSWORD} postgres \
     psql -U ${POSTGRES_USER} ${POSTGRES_USER} -c 'SELECT 1'"
 
-  flake8 "${@}"
-  black --check
+  lint "${@}"
+  format --check
   manage migrate
   manage test
 }

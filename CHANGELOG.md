@@ -20,6 +20,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Rename `webpack` Docker build stage to `assets`
 - Copy all files into the `assets` build stage to simplify things
 - Replace `cp -a` with `cp -r` in Docker entrypoint to make it easier to delete older assets
+- Rename `run hadolint` to `run lint:dockerfile`
+- Rename `run flake8` to `run lint`
+- Rename `run black` to `run format`
+- Rename `run bash` to `run shell`
 
 #### Languages and services
 
