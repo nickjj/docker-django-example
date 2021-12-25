@@ -7,6 +7,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+- Nothing yet!
+
+## [0.7.0] - 2021-12-25
+
 ### Added
 
 - `/node_modules/.bin` to `$PATH` to easier access Yarn installed binaries
@@ -33,6 +37,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Update `postcss` to `8.4.5`
 - Update `tailwindcss` to `3.0.7`
+
+### Removed
+
+- Deleting old assets in the Docker entrypoint (it's best to handle this out of band in a cron job, etc.)
 
 ## [0.6.0] - 2021-12-07
 
@@ -185,7 +193,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Everything!
 
-[Unreleased]: https://github.com/nickjj/docker-django-example/compare/0.6.0...HEAD
+[Unreleased]: https://github.com/nickjj/docker-django-example/compare/0.7.0...HEAD
+[0.7.0]: https://github.com/nickjj/docker-django-example/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/nickjj/docker-django-example/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/nickjj/docker-django-example/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/nickjj/docker-django-example/compare/0.3.1...0.4.0

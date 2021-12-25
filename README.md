@@ -133,7 +133,7 @@ these commands for PowerShell if you want.
 git clone https://github.com/nickjj/docker-django-example hellodjango
 cd hellodjango
 
-# Optionally checkout a specific tag, such as: git checkout 0.6.0
+# Optionally checkout a specific tag, such as: git checkout 0.7.0
 ```
 
 #### Copy a few example files because the real files are git ignored:
