@@ -30,7 +30,7 @@ let copy = {
       force: true,
       dereference: true,
       preserveTimestamps: true,
-    }));
+    }))
   },
 }
 
