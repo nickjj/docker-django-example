@@ -7,6 +7,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- `yarn cache clean` after `yarn install` in `Dockerfile` (Hadolint warning)
+- `--no-cache-dir` flag to `pip3 install` command in `bin/pip3-install` (Hadolint warning)
+
 ### Changed
 
 - Update Bash shebang to use `#!/usr/bin/env bash` in `pip3-install` and `docker-entrypoint-web`
