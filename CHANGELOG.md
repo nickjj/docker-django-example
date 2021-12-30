@@ -11,6 +11,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - `yarn cache clean` after `yarn install` in `Dockerfile` (Hadolint warning)
 - `--no-cache-dir` flag to `pip3 install` command in `bin/pip3-install` (Hadolint warning)
+- [esbuild-copy-static-files](https://github.com/nickjj/esbuild-copy-static-files) plugin to drastically improve how static files are copied (check `assets/esbuild.config.js`)
 
 ### Changed
 
