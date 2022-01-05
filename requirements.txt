@@ -1,11 +1,11 @@
-Django==4.0
+Django==4.0.1
 gunicorn==20.1.0
 whitenoise==5.3.0
 
-psycopg2==2.9.2
+psycopg2==2.9.3
 
-redis==4.0.2
-celery==5.2.1
+redis==4.1.0
+celery==5.2.3
 
 flake8==4.0.1
 black==20.8b1
