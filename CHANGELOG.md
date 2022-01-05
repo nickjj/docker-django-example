@@ -24,6 +24,12 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `psycopg2` to `2.9.3`
 - Update `redis` to `4.1.0`
 
+#### Front-end packages
+
+- Update `autoprefixer` to `10.4.1`
+- Update `esbuild` to `0.14.10`
+- Update `tailwindcss` to `3.0.11`
+
 ## [0.7.0] - 2021-12-25
 
 ### Added
