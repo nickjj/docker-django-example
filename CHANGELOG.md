@@ -26,9 +26,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Front-end packages
 
-- Update `autoprefixer` to `10.4.1`
-- Update `esbuild` to `0.14.10`
-- Update `tailwindcss` to `3.0.11`
+- Update `autoprefixer` to `10.4.2`
+- Update `esbuild` to `0.14.11`
+- Update `tailwindcss` to `3.0.15`
 
 ## [0.7.0] - 2021-12-25
 
