@@ -17,6 +17,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Update Bash shebang to use `#!/usr/bin/env bash` in `pip3-install` and `docker-entrypoint-web`
 
+#### Languages and services
+
+- Update `Python` to `3.10.2`
+- Update `Node` to `16.3.2`
+
 #### Back-end packages
 
 - Update `Django` to `4.0.1`
