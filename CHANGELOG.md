@@ -22,12 +22,12 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `Python` to `3.10.2`
 - Update `Node` to `16.3.2`
 
-#### Back-end packages
+#### Back-end dependencies
 
 - Update `Django` to `4.0.1`
 - Update `celery` to `5.2.3`
 - Update `psycopg2` to `2.9.3`
-- Update `redis` to `4.1.0`
+- Update `redis` to `4.1.1`
 
 #### Front-end packages
 
