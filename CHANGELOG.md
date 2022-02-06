@@ -36,6 +36,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `postcss` to `8.4.6`
 - Update `tailwindcss` to `3.0.18`
 
+### Fixed
+
+- `COPY --chown=node:node ../ ../` has been fixed to be `COPY --chown=node:node . ..`
+
 ## [0.7.0] - 2021-12-25
 
 ### Added
