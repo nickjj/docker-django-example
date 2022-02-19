@@ -20,7 +20,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Languages and services
 
 - Update `Python` to `3.10.2`
-- Update `Node` to `16.3.2`
+- Update `Node` to `16.14.0`
 
 #### Back-end dependencies
 
