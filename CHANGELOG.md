@@ -34,9 +34,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Front-end dependencies
 
-- Update `esbuild` to `0.14.17`
 - Update `postcss` to `8.4.6`
-- Update `tailwindcss` to `3.0.18`
+- Update `esbuild` to `0.14.23`
+- Update `tailwindcss` to `3.0.23`
 
 ### Fixed
 
