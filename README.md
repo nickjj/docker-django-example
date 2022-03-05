@@ -88,7 +88,8 @@ not all) note worthy additions and changes.
     - *[flake8](https://github.com/PyCQA/flake8)* is used to lint the code base
     - *[black](https://github.com/psf/black)* is used to format the code base
 - **Django apps**:
-    - Add `pages` app with a `/` page and `/up` health check endpoint
+    - Add `pages` app to render a home page
+    - Add `up` app to provide a few health check pages
 - **Config**:
     - Log to STDOUT so that Docker can consume and deal with log output 
     - Extract a bunch of configuration settings into environment variables

@@ -16,6 +16,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Update Bash shebang to use `#!/usr/bin/env bash` in `pip3-install` and `docker-entrypoint-web`
+- Refactor `/up/` endpoint into its own app and add `/up/databases` as a second URL
 
 #### Languages and services
 
