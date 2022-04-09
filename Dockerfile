@@ -29,7 +29,7 @@ CMD ["bash"]
 
 ###############################################################################
 
-FROM python:3.10.3-slim-bullseye AS app
+FROM python:3.10.4-slim-bullseye AS app
 LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app

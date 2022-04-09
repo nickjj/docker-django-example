@@ -20,7 +20,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Languages and services
 
-- Update `Python` to `3.10.3`
+- Update `Python` to `3.10.4`
 - Update `Node` to `16.14.2`
 - Update `PostgreSQL` to `14.2`
 
