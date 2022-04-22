@@ -1,4 +1,4 @@
-amqp==5.1.0
+amqp==5.1.1
 asgiref==3.5.0
 async-timeout==4.0.2
 billiard==3.6.4.0
@@ -9,7 +9,7 @@ click-didyoumean==0.3.0
 click-plugins==1.1.1
 click-repl==0.2.0
 Deprecated==1.2.13
-Django==4.0.3
+Django==4.0.4
 flake8==4.0.1
 gunicorn==20.1.0
 kombu==5.2.4
@@ -17,12 +17,12 @@ mccabe==0.6.1
 mypy-extensions==0.4.3
 packaging==21.3
 pathspec==0.9.0
-platformdirs==2.5.1
+platformdirs==2.5.2
 prompt-toolkit==3.0.29
 psycopg2==2.9.3
 pycodestyle==2.8.0
 pyflakes==2.4.0
-pyparsing==3.0.7
+pyparsing==3.0.8
 pytz==2022.1
 redis==4.2.2
 six==1.16.0

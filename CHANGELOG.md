@@ -26,7 +26,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end dependencies
 
-- Update `Django` to `4.0.3`
+- Update `Django` to `4.0.4`
 - Update `black` to `22.3.0`
 - Update `celery` to `5.2.6`
 - Update `psycopg2` to `2.9.3`
