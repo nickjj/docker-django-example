@@ -23,6 +23,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `Python` to `3.10.4`
 - Update `Node` to `16.14.2`
 - Update `PostgreSQL` to `14.2`
+- Update `Redis` to `7.0.0`
 
 #### Back-end dependencies
 
