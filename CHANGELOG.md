@@ -15,6 +15,13 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `PostgreSQL` to `14.3`
 - Update `Redis` to `7.0.1`
 
+#### Back-end dependencies
+
+- Update `Django` to `4.0.5`
+- Update `celery` to `5.2.7`
+- Update `redis` to `4.3.3`
+- Update `whitenoise` to `6.2.0`
+
 ## [0.8.0] - 2022-05-15
 
 ### Added
