@@ -7,7 +7,13 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-- Nothing yet!
+### Changed
+
+#### Languages and services
+
+- Update `Python` to `3.10.5`
+- Update `PostgreSQL` to `14.3`
+- Update `Redis` to `7.0.1`
 
 ## [0.8.0] - 2022-05-15
 
