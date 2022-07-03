@@ -12,8 +12,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Languages and services
 
 - Update `Python` to `3.10.5`
-- Update `PostgreSQL` to `14.3`
-- Update `Redis` to `7.0.1`
+- Update `PostgreSQL` to `14.4`
+- Update `Redis` to `7.0.2`
 
 #### Back-end dependencies
 
