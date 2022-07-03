@@ -4,8 +4,8 @@ whitenoise==6.2.0
 
 psycopg2==2.9.3
 
-redis==4.3.3
+redis==4.3.4
 celery==5.2.7
 
 flake8==4.0.1
-black==22.3.0
+black==22.6.0
