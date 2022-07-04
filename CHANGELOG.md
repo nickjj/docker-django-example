@@ -18,7 +18,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end dependencies
 
-- Update `Django` to `4.0.5`
+- Update `Django` to `4.0.6`
 - Update `black` to `22.6.0`
 - Update `celery` to `5.2.7`
 - Update `redis` to `4.3.4`
