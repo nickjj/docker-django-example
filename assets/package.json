@@ -2,11 +2,11 @@
   "name": "hello",
   "private": true,
   "dependencies": {
-    "autoprefixer": "10.4.7",
-    "esbuild": "0.14.48",
+    "autoprefixer": "10.4.8",
+    "esbuild": "0.14.53",
     "esbuild-copy-static-files": "0.1.0",
     "postcss": "8.4.14",
     "postcss-import": "14.1.0",
-    "tailwindcss": "3.1.4"
+    "tailwindcss": "3.1.7"
   }
 }
