@@ -7,6 +7,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- `set -o nounset` to `run` script to exit if there's any undefined variables
+
 ### Changed
 
 #### Languages and services
