@@ -10,7 +10,7 @@ click-plugins==1.1.1
 click-repl==0.2.0
 Deprecated==1.2.13
 Django==4.1
-flake8==5.0.3
+flake8==5.0.4
 gunicorn==20.1.0
 kombu==5.2.4
 mccabe==0.7.0
@@ -20,10 +20,10 @@ pathspec==0.9.0
 platformdirs==2.5.2
 prompt-toolkit==3.0.30
 psycopg2==2.9.3
-pycodestyle==2.9.0
+pycodestyle==2.9.1
 pyflakes==2.5.0
 pyparsing==3.0.9
-pytz==2022.1
+pytz==2022.2.1
 redis==4.3.4
 six==1.16.0
 sqlparse==0.4.2

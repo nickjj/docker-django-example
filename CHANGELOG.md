@@ -20,7 +20,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Update `Django` to `4.1.0`
 - Update `black` to `22.6.0`
-- Update `flake8` to `5.0.3`
+- Update `flake8` to `5.0.4`
 - Update `celery` to `5.2.7`
 - Update `redis` to `4.3.4`
 - Update `whitenoise` to `6.2.0`

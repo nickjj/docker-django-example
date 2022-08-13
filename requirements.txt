@@ -7,5 +7,5 @@ psycopg2==2.9.3
 redis==4.3.4
 celery==5.2.7
 
-flake8==5.0.3
+flake8==5.0.4
 black==22.6.0
