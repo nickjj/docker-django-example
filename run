@@ -13,18 +13,24 @@ if [[ ! -t 1 ]]; then
   TTY="-T"
 fi
 
+# Dynamically figure out to use Docker Compose v1 or Docker Compose v2.
+docker_compose="docker-compose"
+if ! command -v "${docker_compose}"; then
+  docker_compose="docker compose"
+fi
+
 # -----------------------------------------------------------------------------
 # Helper functions start with _ and aren't listed in this script's help menu.
 # -----------------------------------------------------------------------------
 
 function _dc {
-  docker-compose "${DC}" ${TTY} "${@}"
+  ${docker_compose} "${DC}" ${TTY} "${@}"
 }
 
 function _build_run_down {
-  docker-compose build
-  docker-compose run ${TTY} "${@}"
-  docker-compose down
+  ${docker_compose} build
+  ${docker_compose} run ${TTY} "${@}"
+  ${docker_compose} down
 }
 
 # -----------------------------------------------------------------------------
@@ -153,12 +159,12 @@ function ci:test {
   cp --no-clobber .env.example .env
   cp --no-clobber docker-compose.override.yml.example docker-compose.override.yml
 
-  docker-compose build
-  docker-compose up -d
+  ${docker_compose} build
+  ${docker_compose} up -d
 
   # shellcheck disable=SC1091
   . .env
-  wait-until "docker-compose exec -T \
+  wait-until "${docker_compose} exec -T \
     -e PGPASSWORD=${POSTGRES_PASSWORD} postgres \
     psql -U ${POSTGRES_USER} ${POSTGRES_USER} -c 'SELECT 1'"
 

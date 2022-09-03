@@ -151,6 +151,7 @@ internet connection speed and computer's hardware specs. That's because it's
 going to download a few Docker images and build the Python + Yarn dependencies.*
 
 ```sh
+# Using Docker Compose v2 instead? It's all good, run `docker compose` instead!
 docker-compose up --build
 ```
 

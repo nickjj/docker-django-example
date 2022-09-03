@@ -10,6 +10,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - `set -o nounset` to `run` script to exit if there's any undefined variables
+- Dynamically figure out to use `docker-compose` or `docker compose` in the `run` script
 
 ### Changed
 
