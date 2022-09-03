@@ -13,6 +13,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
+- Switch Docker Compose `env_file` to `environment` for `postgres` to avoid needless recreates on `.env` changes
+
 #### Languages and services
 
 - Update `Python` to `3.10.5`
@@ -35,6 +37,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `esbuild` to `0.15.2`
 - Update `postcss` to `8.4.16`
 - Update `tailwindcss` to `3.1.8`
+
+### Removed
+
+- Docker Compose `env_file` property for `redis` to avoid needless recreates on `.env` changes
 
 ## [0.8.0] - 2022-05-15
 

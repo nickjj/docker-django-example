@@ -23,8 +23,10 @@ services:
         limits:
           cpus: "${DOCKER_POSTGRES_CPUS:-0}"
           memory: "${DOCKER_POSTGRES_MEMORY:-0}"
-    env_file:
-      - ".env"
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      # POSTGRES_DB: "${POSTGRES_DB}"
     image: "postgres:14.5-bullseye"
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"
@@ -37,8 +39,6 @@ services:
         limits:
           cpus: "${DOCKER_REDIS_CPUS:-0}"
           memory: "${DOCKER_REDIS_MEMORY:-0}"
-    env_file:
-      - ".env"
     image: "redis:7.0.4-bullseye"
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"
