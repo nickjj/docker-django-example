@@ -15,7 +15,7 @@ fi
 
 # Dynamically figure out to use Docker Compose v1 or Docker Compose v2.
 docker_compose="docker-compose"
-if ! command -v "${docker_compose}"; then
+if ! command -v "${docker_compose}" 1> /dev/null; then
   docker_compose="docker compose"
 fi
 
