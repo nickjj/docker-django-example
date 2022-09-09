@@ -16,6 +16,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Switch Docker Compose `env_file` to `environment` for `postgres` to avoid needless recreates on `.env` changes
 - Replace override file with Docker Compose profiles for running specific services
+- Update Github Actions to use Ubuntu 22.04
 
 #### Languages and services
 
