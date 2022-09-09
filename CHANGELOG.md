@@ -10,6 +10,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - `set -o nounset` to `run` script to exit if there's any undefined variables
+- Adjust `x-assets` to use a `stop_grace_period` of `0` for faster CTRL+c times in dev
 
 ### Changed
 
