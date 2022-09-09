@@ -32,5 +32,3 @@ jobs:
           sed -i "s|export NODE_ENV|#export NODE_ENV|g" .env*
 
           ./run ci:test
-        env:
-          DOCKER_BUILDKIT: "1"
