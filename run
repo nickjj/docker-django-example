@@ -6,17 +6,11 @@ set -o nounset
 
 DC="${DC:-exec}"
 
-# If we're running in CI we need to disable TTY allocation for docker-compose
+# If we're running in CI we need to disable TTY allocation for docker compose
 # commands that enable it by default, such as exec and run.
 TTY=""
 if [[ ! -t 1 ]]; then
   TTY="-T"
-fi
-
-# Dynamically figure out to use Docker Compose v1 or Docker Compose v2.
-docker_compose="docker-compose"
-if ! command -v "${docker_compose}" 1> /dev/null; then
-  docker_compose="docker compose"
 fi
 
 # -----------------------------------------------------------------------------
@@ -24,13 +18,13 @@ fi
 # -----------------------------------------------------------------------------
 
 function _dc {
-  ${docker_compose} "${DC}" ${TTY} "${@}"
+  docker compose "${DC}" ${TTY} "${@}"
 }
 
 function _build_run_down {
-  ${docker_compose} build
-  ${docker_compose} run ${TTY} "${@}"
-  ${docker_compose} down
+  docker compose build
+  docker compose run ${TTY} "${@}"
+  docker compose down
 }
 
 # -----------------------------------------------------------------------------
@@ -158,12 +152,12 @@ function ci:test {
 
   cp --no-clobber .env.example .env
 
-  ${docker_compose} build
-  ${docker_compose} up -d
+  docker compose build
+  docker compose up -d
 
   # shellcheck disable=SC1091
   . .env
-  wait-until "${docker_compose} exec -T \
+  wait-until "docker compose exec -T \
     -e PGPASSWORD=${POSTGRES_PASSWORD} postgres \
     psql -U ${POSTGRES_USER} ${POSTGRES_USER} -c 'SELECT 1'"
 

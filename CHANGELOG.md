@@ -10,7 +10,6 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - `set -o nounset` to `run` script to exit if there's any undefined variables
-- Dynamically figure out to use `docker-compose` or `docker compose` in the `run` script
 
 ### Changed
 
@@ -45,6 +44,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - Docker Compose `env_file` property for `redis` to avoid needless recreates on `.env` changes
+- Drop support for Docker Compose v1 (mainly to use profiles in an optimal way, it's worth it!)
 
 ## [0.8.0] - 2022-05-15
 
