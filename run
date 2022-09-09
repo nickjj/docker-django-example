@@ -157,7 +157,6 @@ function ci:test {
   lint:dockerfile "${@}"
 
   cp --no-clobber .env.example .env
-  cp --no-clobber docker-compose.override.yml.example docker-compose.override.yml
 
   ${docker_compose} build
   ${docker_compose} up -d

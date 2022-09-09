@@ -15,6 +15,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Switch Docker Compose `env_file` to `environment` for `postgres` to avoid needless recreates on `.env` changes
+- Replace override file with Docker Compose profiles for running specific services
 
 #### Languages and services
 

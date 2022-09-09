@@ -137,11 +137,10 @@ cd hellodjango
 # Optionally checkout a specific tag, such as: git checkout 0.8.0
 ```
 
-#### Copy a few example files because the real files are git ignored:
+#### Copy an example .env file because the real one is git ignored
 
 ```sh
 cp .env.example .env
-cp docker-compose.override.yml.example docker-compose.override.yml
 ```
 
 #### Build everything:
