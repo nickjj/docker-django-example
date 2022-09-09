@@ -143,7 +143,7 @@ cd hellodjango
 # Optionally checkout a specific tag, such as: git checkout 0.9.0
 ```
 
-#### Copy an example .env file because the real one is git ignored
+#### Copy an example .env file because the real one is git ignored:
 
 ```sh
 cp .env.example .env
