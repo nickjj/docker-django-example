@@ -7,7 +7,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
-- Nothing yet!
+### Changed
+
+- Reference `PORT` variable in the `docker-compose.yml` web service instead of hard coding `8000`
 
 ## [0.9.0] - 2022-09-09
 
