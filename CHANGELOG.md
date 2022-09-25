@@ -15,6 +15,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Update `Redis` to `7.0.5`
 
+#### Back-end dependencies
+
+- Update `Django` to `4.1.1`
+- Update `black` to `22.8.0`
+
 ## [0.9.0] - 2022-09-09
 
 ### Added
