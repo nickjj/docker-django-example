@@ -3,6 +3,8 @@ x-app: &default-app
     context: "."
     target: "app"
     args:
+      - "UID=${UID:-1000}"
+      - "GID=${GID:-1000}"
       - "DEBUG=${DEBUG:-false}"
       - "NODE_ENV=${NODE_ENV:-production}"
   depends_on:
@@ -21,6 +23,8 @@ x-assets: &default-assets
     context: "."
     target: "assets"
     args:
+      - "UID=${UID:-1000}"
+      - "GID=${GID:-1000}"
       - "NODE_ENV=${NODE_ENV:-production}"
   env_file:
     - ".env"
