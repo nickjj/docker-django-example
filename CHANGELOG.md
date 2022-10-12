@@ -10,6 +10,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - Ability to customize `UID` and `GID` if you're not using `1000:1000` (check the `.env.example` file)
+- Output `docker compose logs` in CI for easier debugging
 
 ### Changed
 
