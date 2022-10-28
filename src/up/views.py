@@ -3,7 +3,6 @@ from django.db import connection
 from django.http import HttpResponse
 from redis import Redis
 
-
 redis = Redis.from_url(settings.REDIS_URL)
 
 

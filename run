@@ -56,6 +56,10 @@ function lint {
   cmd flake8 "${@}"
 }
 
+function isort {
+  # Sort Python imports
+  cmd isort . "${@}"
+}
 function format {
   # Format Python code
   cmd black . "${@}"
@@ -164,6 +168,7 @@ function ci:test {
   docker compose logs
 
   lint "${@}"
+  isort --check
   format --check
   manage migrate
   manage test

@@ -86,6 +86,7 @@ not all) note worthy additions and changes.
     - *[whitenoise](https://github.com/evansd/whitenoise)* for serving static files
 - **Linting and formatting**:
     - *[flake8](https://github.com/PyCQA/flake8)* is used to lint the code base
+    - *[isort](https://github.com/PyCQA/isort)* is used to auto-sort Python imports
     - *[black](https://github.com/psf/black)* is used to format the code base
 - **Django apps**:
     - Add `pages` app to render a home page
@@ -189,6 +190,13 @@ Visit <http://localhost:8000> in your favorite browser.
 ```sh
 # You should get no output (that means everything is operational).
 ./run lint
+```
+
+#### Sorting Python imports in the code base:
+
+```sh
+# You should see that everything is unchanged (imports are already formatted).
+./run 
 ```
 
 #### Formatting the code base:

@@ -8,4 +8,5 @@ redis==4.3.4
 celery==5.2.7
 
 flake8==5.0.4
+isort==5.10.1
 black==22.10.0
