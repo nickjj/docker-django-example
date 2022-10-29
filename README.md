@@ -196,7 +196,7 @@ Visit <http://localhost:8000> in your favorite browser.
 
 ```sh
 # You should see that everything is unchanged (imports are already formatted).
-./run 
+./run format:imports
 ```
 
 #### Formatting the code base:
