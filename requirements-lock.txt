@@ -20,7 +20,7 @@ packaging==21.3
 pathspec==0.10.1
 platformdirs==2.5.2
 prompt-toolkit==3.0.31
-psycopg2==2.9.4
+psycopg2==2.9.5
 pycodestyle==2.9.1
 pyflakes==2.5.0
 pyparsing==3.0.9
@@ -28,7 +28,6 @@ pytz==2022.5
 redis==4.3.4
 six==1.16.0
 sqlparse==0.4.3
-tomli==2.0.1
 vine==5.0.0
 wcwidth==0.2.5
 whitenoise==6.2.0
