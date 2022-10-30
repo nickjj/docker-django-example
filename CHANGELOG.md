@@ -39,6 +39,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `postcss` to `8.4.18`
 - Update `tailwindcss` to `3.2.1`
 
+### Fixed
+
+- Ensure Flake8, Black and isort all use 79 as the max line length
+
 ## [0.9.0] - 2022-09-09
 
 ### Added
