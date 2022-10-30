@@ -17,6 +17,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Reference `PORT` variable in the `docker-compose.yml` web service instead of hard coding `8000`
+- Adjust Hadolint to exit > 0 if any style warnings are present
 
 #### Languages and services
 
