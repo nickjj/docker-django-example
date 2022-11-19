@@ -9,7 +9,7 @@ click-didyoumean==0.3.0
 click-plugins==1.1.1
 click-repl==0.2.0
 Deprecated==1.2.13
-Django==4.1.2
+Django==4.1.3
 flake8==5.0.4
 gunicorn==20.1.0
 isort==5.10.1
@@ -17,14 +17,14 @@ kombu==5.2.4
 mccabe==0.7.0
 mypy-extensions==0.4.3
 packaging==21.3
-pathspec==0.10.1
-platformdirs==2.5.2
-prompt-toolkit==3.0.31
+pathspec==0.10.2
+platformdirs==2.5.4
+prompt-toolkit==3.0.32
 psycopg2==2.9.5
 pycodestyle==2.9.1
 pyflakes==2.5.0
 pyparsing==3.0.9
-pytz==2022.5
+pytz==2022.6
 redis==4.3.4
 six==1.16.0
 sqlparse==0.4.3

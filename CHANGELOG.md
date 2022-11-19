@@ -29,7 +29,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Back-end dependencies
 
 - Update `black` to `22.10.0`
-- Update `Django` to `4.1.2`
+- Update `Django` to `4.1.3`
 - Update `psycopg2` to `2.9.5`
 
 #### Front-end dependencies
