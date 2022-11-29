@@ -135,6 +135,20 @@ of [WSL or WSL
 That's because we're going to be running shell commands. You can always modify
 these commands for PowerShell if you want.
 
+Optional Note for WINDOWS - if you are on windows, you can avoid a bug similar to the following:
+
+```sh
+> [hellodjango-web app  6/10] RUN chmod 0755 bin/* && bin/pip3-install:
+#0 0.651 /usr/bin/env: ‘bash\r’: No such file or directory
+```
+
+by running the following before your git clone:
+
+```sh
+git config --global core.autocrlf false
+```
+then continue as instructed. Explanation [here](https://stackoverflow.com/questions/29045140/env-bash-r-no-such-file-or-directory).
+ 
 #### Clone this repo anywhere you want and move into the directory:
 
 ```sh
