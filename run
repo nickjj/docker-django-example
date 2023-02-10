@@ -117,7 +117,7 @@ function yarn:outdated {
 function yarn:build:js {
   # Build JS assets, this is meant to be run from within the assets container
   mkdir -p ../public/js
-  node esbuild.config.js
+  node esbuild.config.mjs
 }
 
 function yarn:build:css {
