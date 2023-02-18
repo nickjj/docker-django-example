@@ -29,12 +29,12 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end dependencies
 
-- Update `Django` to `4.1.6`
+- Update `Django` to `4.1.7`
 - Update `black` to `22.3.1`
 - Update `flake8` to `6.0.0`
 - Update `isort` to `5.12.1`
 - Update `psycopg2` to `2.9.5`
-- Update `redis` to `4.4.2`
+- Update `redis` to `4.5.1`
 - Update `whitenoise` to `6.3.0`
 
 #### Front-end dependencies
