@@ -52,6 +52,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Fixed
 
 - Ensure Flake8, Black and isort all use 79 as the max line length
+- HTML templates not reloading in development by using `loaders` in `src/config/setting.py`
 
 ## [0.9.0] - 2022-09-09
 
