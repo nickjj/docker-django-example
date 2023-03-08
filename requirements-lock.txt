@@ -17,8 +17,8 @@ mccabe==0.7.0
 mypy-extensions==1.0.0
 packaging==23.0
 pathspec==0.11.0
-platformdirs==3.0.0
-prompt-toolkit==3.0.36
+platformdirs==3.1.0
+prompt-toolkit==3.0.38
 psycopg2==2.9.5
 pycodestyle==2.10.0
 pyflakes==3.0.1
@@ -28,4 +28,4 @@ six==1.16.0
 sqlparse==0.4.3
 vine==5.0.0
 wcwidth==0.2.6
-whitenoise==6.3.0
+whitenoise==6.4.0
