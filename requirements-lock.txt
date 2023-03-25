@@ -1,6 +1,5 @@
 amqp==5.1.1
 asgiref==3.6.0
-async-timeout==4.0.2
 billiard==3.6.4.0
 black==23.1.0
 celery==5.2.7
@@ -16,14 +15,14 @@ kombu==5.2.4
 mccabe==0.7.0
 mypy-extensions==1.0.0
 packaging==23.0
-pathspec==0.11.0
-platformdirs==3.1.0
+pathspec==0.11.1
+platformdirs==3.1.1
 prompt-toolkit==3.0.38
 psycopg2==2.9.5
 pycodestyle==2.10.0
 pyflakes==3.0.1
-pytz==2022.7.1
-redis==4.5.1
+pytz==2023.2
+redis==4.5.3
 six==1.16.0
 sqlparse==0.4.3
 vine==5.0.0

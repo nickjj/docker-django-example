@@ -4,7 +4,7 @@ whitenoise==6.4.0
 
 psycopg2==2.9.5
 
-redis==4.5.1
+redis==4.5.3
 celery==5.2.7
 
 flake8==6.0.0
