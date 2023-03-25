@@ -2,8 +2,8 @@
   "name": "hello",
   "private": true,
   "dependencies": {
-    "autoprefixer": "10.4.13",
-    "esbuild": "0.17.11",
+    "autoprefixer": "10.4.14",
+    "esbuild": "0.17.13",
     "esbuild-copy-static-files": "0.1.0",
     "postcss": "8.4.21",
     "postcss-import": "15.1.0",
