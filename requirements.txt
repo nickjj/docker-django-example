@@ -2,7 +2,7 @@ Django==4.2
 gunicorn==20.1.0
 whitenoise==6.4.0
 
-psycopg==3.1.8
+psycopg==3.1.9
 
 redis==4.5.4
 celery==5.2.7

@@ -29,7 +29,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end dependencies
 
-- Replace `psycopg2` with `psycopg` (3.X)
+- Replace `psycopg2` with `psycopg` (3.1.9)
 - Update `Django` to `4.2`
 - Update `flake8` to `6.0.0`
 - Update `isort` to `5.12.1`
