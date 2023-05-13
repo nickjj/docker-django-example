@@ -30,10 +30,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Back-end dependencies
 
 - Replace `psycopg2` with `psycopg` (3.1.9)
-- Update `Django` to `4.2`
+- Update `Django` to `4.2.1`
 - Update `flake8` to `6.0.0`
 - Update `isort` to `5.12.1`
-- Update `redis` to `4.5.4`
+- Update `redis` to `4.5.5`
 - Update `whitenoise` to `6.4.0`
 
 #### Front-end dependencies
