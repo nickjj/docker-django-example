@@ -84,6 +84,7 @@ not all) note worthy additions and changes.
 - **Packages and extensions**:
     - *[gunicorn](https://gunicorn.org/)* for an app server in both development and production
     - *[whitenoise](https://github.com/evansd/whitenoise)* for serving static files
+    - *[django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)* for displaying info about a request
 - **Linting and formatting**:
     - *[flake8](https://github.com/PyCQA/flake8)* is used to lint the code base
     - *[isort](https://github.com/PyCQA/isort)* is used to auto-sort Python imports

@@ -9,6 +9,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Nothing yet!
 
+### Added
+
+- `django-debug-toolbar` package
+
 ## [0.10.0] - 2023-05-13
 
 ### Added
