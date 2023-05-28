@@ -11,6 +11,12 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - `django-debug-toolbar` package
 
+### Changed
+
+#### Front-end dependencies
+
+- Update `postcss` to `8.4.24`
+
 ## [0.10.0] - 2023-05-13
 
 ### Added
