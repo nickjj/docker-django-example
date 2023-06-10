@@ -13,6 +13,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
+#### Back-end dependencies
+
+- Update `Django` to `4.2.2`
+- Update `celery` to `5.3.0`
+
 #### Front-end dependencies
 
 - Update `postcss` to `8.4.24`
