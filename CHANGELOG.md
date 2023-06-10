@@ -13,6 +13,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
+- Convert `SECRET_KEY` into a required env var
+
 #### Languages and services
 
 - Update `Python` to `3.11.4`
