@@ -22,7 +22,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Back-end dependencies
 
 - Update `Django` to `4.2.2`
-- Update `celery` to `5.3.0`
+- Update `celery` to `5.3.1`
+- Update `whitenoise` to `6.5.0`
 
 #### Front-end dependencies
 
