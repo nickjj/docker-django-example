@@ -22,7 +22,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Back-end dependencies
 
 - Update `Django` to `4.2.3`
+- Update `black` to `23.7.0`
 - Update `celery` to `5.3.1`
+- Update `gunicorn` to `21.2.0`
 - Update `redis` to `4.6.0`
 - Update `whitenoise` to `6.5.0`
 
