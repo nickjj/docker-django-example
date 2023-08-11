@@ -14,6 +14,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Changed
 
 - Convert `SECRET_KEY` into a required env var
+- Add `required: false` to `depends_on` in `docker-compose.yml` (requires Docker Compose v2.20.2+)
 
 #### Languages and services
 

@@ -8,8 +8,12 @@ x-app: &default-app
       - "DEBUG=${DEBUG:-false}"
       - "NODE_ENV=${NODE_ENV:-production}"
   depends_on:
-    - "postgres"
-    - "redis"
+    postgres:
+      condition: "service_started"
+      required: false
+    redis:
+      condition: "service_started"
+      required: false
   env_file:
     - ".env"
   restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"

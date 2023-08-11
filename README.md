@@ -127,8 +127,10 @@ links](#learn-more-about-docker-and-django) near the bottom of this README.
 You'll also need to enable Docker Compose v2 support if you're using Docker
 Desktop. On native Linux without Docker Desktop you can [install it as a plugin
 to Docker](https://docs.docker.com/compose/install/linux/). It's been generally
-available for a while now and very stable. This project uses a specific Docker
-Compose profiles feature that only works with Docker Compose v2.
+available for a while now and is stable. This project uses specific [Docker
+Compose v2
+features](https://nickjanetakis.com/blog/optional-depends-on-with-docker-compose-v2-20-2)
+that only work with Docker Compose v2 2.20.2+.
 
 If you're using Windows, it will be expected that you're following along inside
 of [WSL or WSL
