@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "10.4.14",
-    "esbuild": "0.18.15",
+    "esbuild": "0.19.0",
     "esbuild-copy-static-files": "0.1.0",
     "postcss": "8.4.27",
     "postcss-import": "15.1.0",
