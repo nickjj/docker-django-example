@@ -5,7 +5,7 @@ django-debug-toolbar==4.2.0
 
 psycopg==3.1.10
 
-redis==4.6.0
+redis==5.0.0
 celery==5.3.1
 
 flake8==6.1.0

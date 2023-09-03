@@ -30,7 +30,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `flake8` to `6.1.0`
 - Update `gunicorn` to `21.2.0`
 - Update `psycopg` to `3.1.10`
-- Update `redis` to `4.6.0`
+- Update `redis` to `5.0.0`
 - Update `whitenoise` to `6.5.0`
 
 #### Front-end dependencies
