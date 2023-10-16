@@ -93,7 +93,7 @@ not all) note worthy additions and changes.
     - Add `pages` app to render a home page
     - Add `up` app to provide a few health check pages
 - **Config**:
-    - Log to STDOUT so that Docker can consume and deal with log output 
+    - Log to STDOUT so that Docker can consume and deal with log output
     - Extract a bunch of configuration settings into environment variables
     - Rename project directory from its custom name to `config/`
     - `src/config/settings.py` and the `.env` file handles configuration in all environments
@@ -183,7 +183,7 @@ variables to fix this.
 
 ```sh
 # You can run this from a 2nd terminal.
-./run manage migrate 
+./run manage migrate
 ```
 
 *We'll go over that `./run` script in a bit!*
@@ -416,7 +416,7 @@ couple of free and paid resources. There's Google too!
 
 ### Learn more about Docker and Django
 
-#### Official documentation 
+#### Official documentation
 
 - <https://docs.docker.com/>
 - <https://docs.djangoproject.com/en/4.2/>
