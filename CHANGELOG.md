@@ -25,15 +25,15 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end dependencies
 
-- Update `Django` to `4.2.5`
-- Update `black` to `23.9.1`
+- Update `Django` to `4.2.6`
+- Update `black` to `23.10.0`
 - Update `celery` to `5.3.4`
 - Update `django-debug-toolbar` to `4.2.0`
 - Update `flake8` to `6.1.0`
 - Update `gunicorn` to `21.2.0`
-- Update `psycopg` to `3.1.10`
-- Update `redis` to `5.0.0`
-- Update `whitenoise` to `6.5.0`
+- Update `psycopg` to `3.1.12`
+- Update `redis` to `5.0.1`
+- Update `whitenoise` to `6.6.0`
 
 #### Front-end dependencies
 
