@@ -40,7 +40,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `autoprefixer` to `10.4.16`
 - Update `esbuild` to `0.19.5`
 - Update `postcss` to `8.4.31`
-- Update `tailwindcss` to `3.3.3`
+- Update `tailwindcss` to `3.3.5`
 
 ## [0.10.0] - 2023-05-13
 
