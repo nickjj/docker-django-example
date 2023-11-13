@@ -1,4 +1,4 @@
-Django==4.2.6
+Django==4.2.7
 gunicorn==21.2.0
 whitenoise==6.6.0
 django-debug-toolbar==4.2.0
@@ -6,8 +6,8 @@ django-debug-toolbar==4.2.0
 psycopg==3.1.12
 
 redis==5.0.1
-celery==5.3.4
+celery==5.3.5
 
 flake8==6.1.0
 isort==5.12.0
-black==23.10.0
+black==23.11.0
