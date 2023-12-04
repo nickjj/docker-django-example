@@ -50,7 +50,7 @@ services:
       POSTGRES_USER: "${POSTGRES_USER}"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
       # POSTGRES_DB: "${POSTGRES_DB}"
-    image: "postgres:16.0-bookworm"
+    image: "postgres:16.1-bookworm"
     profiles: ["postgres"]
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"
