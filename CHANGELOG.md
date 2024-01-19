@@ -32,7 +32,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `flake8` to `7.0.0`
 - Update `gunicorn` to `21.2.0`
 - Update `isort` to `5.13.2`
-- Update `psycopg` to `3.1.16`
+- Update `psycopg` to `3.1.17`
 - Update `redis` to `5.0.1`
 - Update `whitenoise` to `6.6.0`
 

@@ -3,7 +3,7 @@ gunicorn==21.2.0
 whitenoise==6.6.0
 django-debug-toolbar==4.2.0
 
-psycopg==3.1.16
+psycopg==3.1.17
 
 redis==5.0.1
 celery==5.3.6

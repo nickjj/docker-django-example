@@ -12,14 +12,14 @@ django-debug-toolbar==4.2.0
 flake8==7.0.0
 gunicorn==21.2.0
 isort==5.13.2
-kombu==5.3.4
+kombu==5.3.5
 mccabe==0.7.0
 mypy-extensions==1.0.0
 packaging==23.2
 pathspec==0.12.1
 platformdirs==4.1.0
 prompt-toolkit==3.0.43
-psycopg==3.1.16
+psycopg==3.1.17
 pycodestyle==2.11.1
 pyflakes==3.2.0
 python-dateutil==2.8.2
@@ -29,5 +29,5 @@ sqlparse==0.4.4
 typing_extensions==4.9.0
 tzdata==2023.4
 vine==5.1.0
-wcwidth==0.2.12
+wcwidth==0.2.13
 whitenoise==6.6.0
