@@ -3,10 +3,10 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "10.4.17",
-    "esbuild": "0.20.0",
+    "esbuild": "0.20.1",
     "esbuild-copy-static-files": "0.1.0",
-    "postcss": "8.4.34",
-    "postcss-import": "16.0.0",
+    "postcss": "8.4.35",
+    "postcss-import": "16.0.1",
     "tailwindcss": "3.4.1"
   }
 }
