@@ -26,7 +26,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Back-end dependencies
 
 - Update `Django` to `5.0.2`
-- Update `black` to `24.1.1`
+- Update `black` to `24.2.0`
 - Update `celery` to `5.3.6`
 - Update `django-debug-toolbar` to `4.3.0`
 - Update `flake8` to `7.0.0`
