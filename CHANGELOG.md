@@ -25,7 +25,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end dependencies
 
-- Update `Django` to `5.0.2`
+- Update `Django` to `5.0.3`
 - Update `black` to `24.2.0`
 - Update `celery` to `5.3.6`
 - Update `django-debug-toolbar` to `4.3.0`
@@ -34,7 +34,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `isort` to `5.13.2`
 - Update `psycopg` to `3.1.17`
 - Update `psycopg` to `3.1.18`
-- Update `redis` to `5.0.1`
+- Update `redis` to `5.0.3`
 - Update `whitenoise` to `6.6.0`
 
 #### Front-end dependencies
