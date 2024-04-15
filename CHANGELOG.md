@@ -39,11 +39,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Front-end dependencies
 
-- Update `autoprefixer` to `10.4.18`
-- Update `esbuild` to `0.20.1`
-- Update `postcss-import` to `16.0.1`
-- Update `postcss` to `8.4.35`
-- Update `tailwindcss` to `3.4.1`
+- Update `autoprefixer` to `10.4.19`
+- Update `esbuild` to `0.20.2`
+- Update `postcss-import` to `16.1.0`
+- Update `postcss` to `8.4.38`
+- Update `tailwindcss` to `3.4.3`
 
 ## [0.10.0] - 2023-05-13
 
