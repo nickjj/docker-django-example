@@ -1,11 +1,11 @@
 Django==5.0.6
 gunicorn==22.0.0
 whitenoise==6.6.0
-django-debug-toolbar==4.3.0
+django-debug-toolbar==4.4.2
 
 psycopg==3.1.19
 
-redis==5.0.4
+redis==5.0.5
 celery==5.4.0
 
 flake8==7.0.0
