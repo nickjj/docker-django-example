@@ -9,10 +9,10 @@ x-app: &default-app
       - "NODE_ENV=${NODE_ENV:-production}"
   depends_on:
     postgres:
-      condition: "service_started"
+      condition: "service_healthy"
       required: false
     redis:
-      condition: "service_started"
+      condition: "service_healthy"
       required: false
   env_file:
     - ".env"
@@ -49,11 +49,16 @@ services:
     environment:
       POSTGRES_USER: "${POSTGRES_USER}"
       POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
-      # POSTGRES_DB: "${POSTGRES_DB}"
+      POSTGRES_DB: "${POSTGRES_DB}"
     image: "postgres:16.3-bookworm"
     profiles: ["postgres"]
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     volumes:
       - "postgres:/var/lib/postgresql/data"
 
@@ -67,6 +72,11 @@ services:
     profiles: ["redis"]
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG"]
+      interval: 1s
+      timeout: 3s
+      retries: 5
     volumes:
       - "redis:/data"
 
@@ -96,6 +106,12 @@ services:
         limits:
           cpus: "${DOCKER_WORKER_CPUS:-0}"
           memory: "${DOCKER_WORKER_MEMORY:-0}"
+    healthcheck:
+      test: ["CMD-SHELL", "celery -b ${REDIS_URL:-redis://redis:6379/0} inspect ping -d celery@$$HOSTNAME"]      
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
     profiles: ["worker"]
 
   js:
