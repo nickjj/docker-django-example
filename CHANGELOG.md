@@ -10,6 +10,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - `django-debug-toolbar` package
+- `WEB_TIMEOUT` environment variable to configure gunicorn's timeout value (defaults to 120s)
 
 ### Changed
 
