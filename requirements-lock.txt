@@ -7,8 +7,8 @@ click==8.1.7
 click-didyoumean==0.3.1
 click-plugins==1.1.1
 click-repl==0.3.0
-Django==5.0.6
-django-debug-toolbar==4.4.2
+Django==5.0.7
+django-debug-toolbar==4.4.6
 flake8==7.1.0
 gunicorn==22.0.0
 isort==5.13.2
@@ -19,13 +19,13 @@ packaging==24.1
 pathspec==0.12.1
 platformdirs==4.2.2
 prompt_toolkit==3.0.47
-psycopg==3.1.19
+psycopg==3.2.1
 pycodestyle==2.12.0
 pyflakes==3.2.0
 python-dateutil==2.9.0.post0
-redis==5.0.6
+redis==5.0.7
 six==1.16.0
-sqlparse==0.5.0
+sqlparse==0.5.1
 typing_extensions==4.12.2
 tzdata==2024.1
 vine==5.1.0
