@@ -24,7 +24,7 @@ jobs:
         run: |
           # Remove volumes in CI to avoid permission errors due to UID / GID.
           sed -i "s|.:/app|/tmp:/tmp|g" .env*
-          sed -i "s|.:/app|/tmp:/tmp|g" docker-compose.yml
+          sed -i "s|.:/app|/tmp:/tmp|g" compose.yaml
 
           # Django requires static files to be collected in order to run its
           # test suite. That means we need to generate production assets from
