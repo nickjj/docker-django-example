@@ -7,6 +7,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+- Nothing yet!
+
+## [0.11.0] - 2024-08-09
+
 ### Added
 
 - `django-debug-toolbar` package
@@ -362,7 +366,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Everything!
 
-[Unreleased]: https://github.com/nickjj/docker-django-example/compare/0.10.0...HEAD
+[Unreleased]: https://github.com/nickjj/docker-django-example/compare/0.11.0...HEAD
+[0.11.0]: https://github.com/nickjj/docker-django-example/compare/0.10.0...0.11.0
 [0.10.0]: https://github.com/nickjj/docker-django-example/compare/0.9.0...0.10.0
 [0.9.0]: https://github.com/nickjj/docker-django-example/compare/0.8.0...0.9.0
 [0.8.0]: https://github.com/nickjj/docker-django-example/compare/0.7.0...0.8.0
