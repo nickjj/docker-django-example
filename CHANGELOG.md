@@ -14,6 +14,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `Postgres` to `16.4`
 - Update `Redis` to `7.4.0`
 
+#### Back-end dependencies
+
+- Update `gunicorn` to `23.0.0`
+
 ## [0.11.0] - 2024-08-09
 
 ### Added
