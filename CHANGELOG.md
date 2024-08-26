@@ -11,6 +11,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Languages and services
 
+- Update `Postgres` to `16.4`
 - Update `Redis` to `7.4.0`
 
 ## [0.11.0] - 2024-08-09
