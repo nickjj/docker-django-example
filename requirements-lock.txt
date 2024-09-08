@@ -17,13 +17,14 @@ mccabe==0.7.0
 mypy-extensions==1.0.0
 packaging==24.1
 pathspec==0.12.1
-platformdirs==4.2.2
+platformdirs==4.3.2
 prompt_toolkit==3.0.47
 psycopg==3.2.1
 pycodestyle==2.12.1
 pyflakes==3.2.0
 python-dateutil==2.9.0.post0
 redis==5.0.8
+setuptools==74.1.2
 six==1.16.0
 sqlparse==0.5.1
 typing_extensions==4.12.2
