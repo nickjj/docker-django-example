@@ -20,7 +20,9 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end dependencies
 
+- Update `Django` to `5.1.1`
 - Update `gunicorn` to `23.0.0`
+- Update `psycopg` to `3.2.2`
 
 #### Front-end dependencies
 
