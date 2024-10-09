@@ -1,15 +1,15 @@
-Django==5.1.1
+Django==5.1.2
 gunicorn==23.0.0
 whitenoise==6.7.0
 django-debug-toolbar==4.4.6
 
-psycopg==3.2.2
+psycopg==3.2.3
 
-redis==5.0.8
+redis==5.1.1
 celery==5.4.0
 
 flake8==7.1.1
 isort==5.13.2
-black==24.8.0
+black==24.10.0
 
 setuptools==74.1.2

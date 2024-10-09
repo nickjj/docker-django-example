@@ -21,9 +21,11 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Back-end dependencies
 
-- Update `Django` to `5.1.1`
+- Update `Django` to `5.1.2`
+- Update `black` to `24.10.0`
 - Update `gunicorn` to `23.0.0`
-- Update `psycopg` to `3.2.2`
+- Update `psycopg` to `3.2.3`
+- Update `redis` to `5.1.1`
 
 #### Front-end dependencies
 
