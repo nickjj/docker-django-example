@@ -10,8 +10,13 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - `setuptools` Python dependency since Docker recently removed this from the official Python image
+- `./run pip3 [...]` to run any Pip command
+- `./run yarn [...]` to run any Yarn command
 
 ### Changed
+
+- Replace `./run pip3:install` with `./run deps:install [--no-build]` to install any deps
+- Replace `./run yarn:install` with `./run deps:install [--no-build]` to install any deps
 
 #### Languages and services
 
