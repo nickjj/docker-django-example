@@ -12,4 +12,4 @@ flake8==7.1.1
 isort==5.13.2
 black==24.10.0
 
-setuptools==74.1.2
+setuptools==75.6.0
