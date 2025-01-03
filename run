@@ -20,6 +20,10 @@ function _dc {
   docker compose "${DC}" ${TTY} "${@}"
 }
 
+function _dc_run {
+   DC="run" _dc --no-deps --rm "${@}"
+}
+
 # -----------------------------------------------------------------------------
 
 function cmd {
@@ -93,8 +97,8 @@ function deps:install {
 
   [ -z "${no_build}" ] && docker compose down && docker compose build
 
-  DC="run" _dc --no-deps --rm js yarn install
-  DC="run" _dc --no-deps --rm web bash -c "cd .. && bin/pip3-install"
+  _dc_run js yarn install
+  _dc_run web bash -c "cd .. && bin/pip3-install"
 }
 
 function pip3 {
@@ -103,7 +107,7 @@ function pip3 {
 
 function pip3:outdated {
   # List any installed packages that are outdated
-  pip3 list --outdated
+  _dc_run web pip3 list --outdated
 }
 
 function yarn {
@@ -112,12 +116,7 @@ function yarn {
 
 function yarn:outdated {
   # List any installed packages that are outdated
-  yarn outdated
-}
-
-function yarn:outdated {
-  # List any installed packages that are outdated
-  _dc js yarn outdated
+  _dc_run js yarn outdated
 }
 
 function yarn:build:js {
