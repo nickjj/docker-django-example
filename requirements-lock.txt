@@ -7,8 +7,8 @@ click==8.1.8
 click-didyoumean==0.3.1
 click-plugins==1.1.1
 click-repl==0.3.0
-Django==5.1.4
-django-debug-toolbar==4.4.6
+Django==5.1.5
+django-debug-toolbar==5.0.1
 flake8==7.1.1
 gunicorn==23.0.0
 isort==5.13.2
