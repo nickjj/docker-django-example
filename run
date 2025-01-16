@@ -7,7 +7,7 @@ DC="${DC:-exec}"
 
 # If we're running in CI we need to disable TTY allocation for docker compose
 # commands that enable it by default, such as exec and run.
-TTY=""
+TTY="${TTY:-}"
 if [[ ! -t 1 ]]; then
   TTY="-T"
 fi
