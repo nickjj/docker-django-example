@@ -136,7 +136,7 @@ function yarn:build:css {
   fi
 
   mkdir -p ../public/css
-  DEBUG=0 tailwindcss --postcss -i css/app.css -o ../public/css/app.css "${args[@]}"
+  DEBUG=0 tailwindcss -i css/app.css -o ../public/css/app.css "${args[@]}"
 }
 
 function clean {
