@@ -32,7 +32,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Update `black` to `24.10.0`
 - Update `django-debug-toolbar` to `5.0.1`
 - Update `gunicorn` to `23.0.0`
-- Update `psycopg` to `3.2.3`
+- Update `psycopg` to `3.2.4`
 - Update `redis` to `5.2.1`
 - Update `whitenoise` to `6.8.2`
 
