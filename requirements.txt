@@ -3,13 +3,13 @@ gunicorn==23.0.0
 whitenoise==6.9.0
 django-debug-toolbar==5.0.1
 
-psycopg==3.2.4
+psycopg==3.2.5
 
 redis==5.2.1
 celery==5.4.0
 
-flake8==7.1.1
-isort==6.0.0
+flake8==7.1.2
+isort==6.0.1
 black==25.1.0
 
-setuptools==75.8.0
+setuptools==75.8.2
