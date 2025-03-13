@@ -21,7 +21,7 @@ function _dc {
 }
 
 function _dc_run {
-   DC="run" _dc --no-deps --rm "${@}"
+  DC="run" _dc --no-deps --rm "${@}"
 }
 
 # -----------------------------------------------------------------------------
@@ -85,7 +85,7 @@ function psql {
   # Connect to PostgreSQL
   # shellcheck disable=SC1091
   . .env
- _dc postgres psql -U "${POSTGRES_USER}" "${@}"
+  _dc postgres psql -U "${POSTGRES_USER}" "${@}"
 }
 
 function redis-cli {

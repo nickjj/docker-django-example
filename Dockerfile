@@ -21,8 +21,8 @@ RUN yarn install && yarn cache clean
 
 ARG NODE_ENV="production"
 ENV NODE_ENV="${NODE_ENV}" \
-    PATH="${PATH}:/node_modules/.bin" \
-    USER="node"
+  PATH="${PATH}:/node_modules/.bin" \
+  USER="node"
 
 COPY --chown=node:node . ..
 
@@ -59,10 +59,10 @@ RUN chmod 0755 bin/* && bin/pip3-install
 
 ARG DEBUG="false"
 ENV DEBUG="${DEBUG}" \
-    PYTHONUNBUFFERED="true" \
-    PYTHONPATH="." \
-    PATH="${PATH}:/home/python/.local/bin" \
-    USER="python"
+  PYTHONUNBUFFERED="true" \
+  PYTHONPATH="." \
+  PATH="${PATH}:/home/python/.local/bin" \
+  USER="python"
 
 COPY --chown=python:python --from=assets /app/public /public
 COPY --chown=python:python . .
@@ -71,7 +71,7 @@ WORKDIR /app/src
 
 RUN if [ "${DEBUG}" = "false" ]; then \
   SECRET_KEY=dummyvalue python3 manage.py collectstatic --no-input; \
-    else mkdir -p /app/public_collected; fi
+  else mkdir -p /app/public_collected; fi
 
 ENTRYPOINT ["/app/bin/docker-entrypoint-web"]
 
