@@ -18,6 +18,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Replace `./run pip3:install` with `./run deps:install [--no-build]` to install any deps
 - Replace `./run yarn:install` with `./run deps:install [--no-build]` to install any deps
 - Allow overriding `$TTY` as an environment variable in the `run` script
+- Use `.hadolint.yaml` to configure Hadolint instead of inline flags
 
 #### Languages and services
 

@@ -45,7 +45,8 @@ function manage {
 function lint:dockerfile {
   # Lint Dockerfile
   docker container run --rm -i \
-    hadolint/hadolint hadolint --ignore DL3008 -t style "${@}" - < Dockerfile
+    -v "${PWD}/.hadolint.yaml:/.config/hadolint.yaml" \
+    hadolint/hadolint hadolint "${@}" - <Dockerfile
 }
 
 function lint {
