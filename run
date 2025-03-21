@@ -17,6 +17,7 @@ fi
 # -----------------------------------------------------------------------------
 
 function _dc {
+  # shellcheck disable=SC2086
   docker compose "${DC}" ${TTY} "${@}"
 }
 
@@ -51,22 +52,22 @@ function lint:dockerfile {
 
 function lint {
   # Lint Python code
-  cmd flake8 "${@}"
+  cmd ruff check "${@}"
 }
 
 function format:imports {
   # Sort Python imports
-  cmd isort . "${@}"
+  lint --select I --fix "${@}"
 }
 
 function format {
   # Format Python code
-  cmd black . "${@}"
+  cmd ruff format "${@}"
 }
 
 function quality {
   # Perform all code quality commands together
-  format:imports
+  format:imports "${@}"
   format
   lint
 }
@@ -181,7 +182,7 @@ function ci:test {
   docker compose logs
 
   lint "${@}"
-  format:imports --check
+  cmd ruff check --select I
   format --check
   manage migrate
   manage test

@@ -86,9 +86,7 @@ not all) note worthy additions and changes.
     - *[whitenoise](https://github.com/evansd/whitenoise)* for serving static files
     - *[django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)* for displaying info about a request
 - **Linting and formatting**:
-    - *[flake8](https://github.com/PyCQA/flake8)* is used to lint the code base
-    - *[isort](https://github.com/PyCQA/isort)* is used to auto-sort Python imports
-    - *[black](https://github.com/psf/black)* is used to format the code base
+    - *[ruff]https://github.com/astral-sh/ruff)* is used to lint and format the code base
 - **Django apps**:
     - Add `pages` app to render a home page
     - Add `up` app to provide a few health check pages

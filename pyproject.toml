@@ -1,7 +1,5 @@
-[tool.black]
+[tool.ruff]
 line-length = 79
 
-[tool.isort]
-profile = "black"
-line_length = 79
-force_single_line = true
+[tool.ruff.lint]
+extend-select = ["SIM"]
