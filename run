@@ -146,7 +146,7 @@ clean() {
   rm -rf public/*.* public/admin public/js public/css public/images public/fonts \
     public_collected/*.* public_collected/admin public_collected/js \
     public_collected/css public_collected/images public_collected/fonts \
-    .pytest_cache/ .coverage celerybeat-schedule
+    .ruff_cache/ .pytest_cache/ .coverage celerybeat-schedule
 
   touch public/.keep public_collected/.keep
 }
