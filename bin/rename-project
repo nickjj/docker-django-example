@@ -59,7 +59,7 @@ Your project has been renamed successfully!
 
 EOF
 
-function init_git_repo {
+init_git_repo() {
   [ -d .git/ ] && rm -rf .git/
 
 cat << EOF
