@@ -21,6 +21,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Use `.hadolint.yaml` to configure Hadolint instead of inline flags
 - Replace Black, flake8 and isort with Ruff
 - Replace `pip3` with `uv` for Python package management (~10x speed boost!)
+- Refactor `Dockerfile` to use multi-stage app builds (~50% / 250MB image size reduction!)
 
 #### Languages and services
 
