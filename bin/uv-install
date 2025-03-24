@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+
+# Ensure we always have an up to date lock file.
+if ! test -f uv.lock || ! uv lock --check 2>/dev/null; then
+  uv lock
+fi
+
+# Otherwise, use the existing lock file exactly how it is defined.
+uv sync --frozen --no-install-project

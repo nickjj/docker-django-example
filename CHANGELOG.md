@@ -20,6 +20,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - Allow overriding `$TTY` as an environment variable in the `run` script
 - Use `.hadolint.yaml` to configure Hadolint instead of inline flags
 - Replace Black, flake8 and isort with Ruff
+- Replace `pip3` with `uv` for Python package management (~10x speed boost!)
 
 #### Languages and services
 

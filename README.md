@@ -107,13 +107,10 @@ not all) note worthy additions and changes.
 
 Besides the Django app itself:
 
+- [uv](https://github.com/astral-sh/uv) is used for package management instead of `pip3` (builds on my machine are ~10x faster!)
 - Docker support has been added which would be any files having `*docker*` in
   its name
 - GitHub Actions have been set up
-- A `requirements-lock.txt` file has been introduced using `pip3`. The
-  management of this file is fully automated by the commands found in the `run`
-  file. We'll cover this in more detail when we talk about [updating
-  dependencies](#updating-dependencies).
 
 ## Running this app
 
@@ -353,45 +350,28 @@ much appreciated!
 
 ## Updating dependencies
 
-Let's say you've customized your app and it's time to make a change to your
-`requirements.txt` or `package.json` file.
-
-Without Docker you'd normally run `pip3 install -r requirements.txt` or `yarn
-install`. With Docker it's basically the same thing and since these commands
-are in our `Dockerfile` we can get away with doing a `docker compose build` but
-don't run that just yet.
-
-You can also access `pip3` and `yarn` in Docker with `./run pip3` and `./run
-yarn` after you've upped the project.
+Let's say you've customized your app and it's time to add a new dependency,
+either for Python or Node.
 
 #### In development:
 
-You can run `./run pip3:outdated` or `./run yarn:outdated` to get a list of
-outdated dependencies based on what you currently have installed. Once you've
-figured out what you want to update, go make those updates in your
-`requirements.txt` and / or `assets/package.json` file.
+##### Option 1
 
-Then to update your dependencies you can run `./run deps:install`. This will
-build a new image with any new dependencies and also make sure any lock file
-updates get copied from your image into your code repo and now you can commit
-those files to version control like usual.
+1. Directly edit `pyproject.toml` or `package.json` to add your package
+2. `./run deps:install` or `./run deps:install --no-build`
+    - The `--no-build` option will only write out a new lock file without re-building your image
 
-Also, you can run `./run deps:install --no-build` to only copy lock file
-updates without re-building an image.
+##### Option 2
 
-You can check out the
-[run](https://github.com/nickjj/docker-django-example/blob/main/run) file to see
-what these commands do in more detail.
+1. Run `./run uv add mypackage --no-sync ` or `run yarn add mypackage --no-lockfile` which will update your `pyproject.toml` or `package.json` with the latest version of that package but not install it
+2. The same step as step 2 from option 1
 
-As for the requirements' lock file, this ensures that the same exact versions
-of every package you have (including dependencies of dependencies) get used the
-next time you build the project. This file is the output of running `pip3
-freeze`. You can check how it works by looking at
-[bin/pip3-install](https://github.com/nickjj/docker-django-example/blob/main/bin/pip3-install).
+Either option is fine, it's up to you based on what's more convenient at the
+time. You can modify the above workflows for updating an existing package or
+removing one as well.
 
-You should never modify the lock files by hand. Add your top level Python
-dependencies to `requirements.txt` and your top level JavaScript dependencies
-to `assets/package.json`, then run the `./run` command(s) mentioned earlier.
+You can also access `uv` and `yarn` in Docker with `./run uv` and `./run yarn`
+after you've upped the project.
 
 #### In CI:
 
@@ -405,7 +385,7 @@ under the `ci:test` function.
 This is usually a non-issue since you'll be pulling down pre-built images from
 a Docker registry but if you decide to build your Docker images directly on
 your server you could run `docker compose build` as part of your deploy
-pipeline.
+pipeline which is similar to how it would work in CI.
 
 ## See a way to improve something?
 

@@ -95,24 +95,27 @@ redis-cli() {
 }
 
 deps:install() {
+  # Install back-end and / or front-end dependencies
   local no_build="${1:-}"
 
   [ -z "${no_build}" ] && docker compose down && docker compose build
 
   _dc_run js yarn install
-  _dc_run web bash -c "cd .. && bin/pip3-install"
+  _dc_run web bash -c "cd .. && bin/uv-install"
 }
 
-pip3() {
-  cmd pip3 "${@}"
+uv() {
+  # Run any uv commands
+  cmd uv "${@}"
 }
 
-pip3:outdated() {
+uv:outdated() {
   # List any installed packages that are outdated
-  _dc_run web pip3 list --outdated
+  _dc_run web uv tree --outdated --depth 1 "${@}"
 }
 
 yarn() {
+  # Run any yarn commands
   _dc js yarn "${@}"
 }
 
