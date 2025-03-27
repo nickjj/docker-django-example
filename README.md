@@ -194,13 +194,6 @@ Visit <http://localhost:8000> in your favorite browser.
 ./run lint
 ```
 
-#### Sorting Python imports in the code base:
-
-```sh
-# You should see that everything is unchanged (imports are already formatted).
-./run format:imports
-```
-
 #### Formatting the code base:
 
 ```sh
@@ -208,7 +201,7 @@ Visit <http://localhost:8000> in your favorite browser.
 ./run format
 ```
 
-*There's also a `./run quality` command to run the above 3 commands together.*
+*There's also a `./run quality` command to run the above commands together.*
 
 #### Running the test suite:
 

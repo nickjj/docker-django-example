@@ -55,19 +55,14 @@ lint() {
   cmd ruff check "${@}"
 }
 
-format:imports() {
-  # Sort Python imports
-  lint --select I --fix "${@}"
-}
-
 format() {
   # Format Python code
+  cmd ruff check --fix
   cmd ruff format "${@}"
 }
 
 quality() {
   # Perform all code quality commands together
-  format:imports "${@}"
   format
   lint
 }
@@ -185,8 +180,7 @@ ci:test() {
   docker compose logs
 
   lint "${@}"
-  cmd ruff check --select I
-  format --check
+  format --check --diff
   manage migrate
   manage test
 }
