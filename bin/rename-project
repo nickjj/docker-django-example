@@ -10,16 +10,16 @@ FIND_MODULE_NAME="Hello"
 FIND_FRAMEWORK="django"
 
 if [ -z "${APP_NAME}" ] || [ -z "${MODULE_NAME}" ]; then
-    echo "You must supply both an app and module name, example: ${0} myapp MyApp"
-    exit 1
+  echo "You must supply both an app and module name, example: ${0} myapp MyApp"
+  exit 1
 fi
 
 if [ "${APP_NAME}" = "${FIND_APP_NAME}" ]; then
-    echo "Your new app name must be different than the current app name"
-    exit 1
+  echo "Your new app name must be different than the current app name"
+  exit 1
 fi
 
-cat << EOF
+cat <<EOF
 When renaming your project you'll need to re-create a new database.
 
 This can easily be done with Docker, but before this script does it
@@ -29,17 +29,18 @@ project's database(s) by removing any associated Docker volumes.
 EOF
 
 while true; do
-    read -p "Run docker compose down -v (y/n)? " -r yn
-    case "${yn}" in
-        [Yy]* )
-          printf "\n--------------------------------------------------------\n"
-          docker compose down -v
-          printf -- "--------------------------------------------------------\n"
+  read -p "Run docker compose down -v (y/n)? " -r yn
+  case "${yn}" in
+  [Yy]*)
+    printf "\n--------------------------------------------------------\n"
+    docker compose down -v
+    printf -- "--------------------------------------------------------\n"
 
-          break;;
-        [Nn]* ) exit;;
-        * ) echo "";;
-    esac
+    break
+    ;;
+  [Nn]*) exit ;;
+  *) echo "" ;;
+  esac
 done
 
 # -----------------------------------------------------------------------------
@@ -47,11 +48,11 @@ done
 # -----------------------------------------------------------------------------
 find . -type f -exec \
   perl -i \
-    -pe "s/(${FIND_APP_NAME}${FIND_FRAMEWORK}|${FIND_APP_NAME})/${APP_NAME}/g;" \
-    -pe "s/${FIND_MODULE_NAME}/${MODULE_NAME}/g;" {} +
+  -pe "s/(${FIND_APP_NAME}${FIND_FRAMEWORK}|${FIND_APP_NAME})/${APP_NAME}/g;" \
+  -pe "s/${FIND_MODULE_NAME}/${MODULE_NAME}/g;" {} +
 # -----------------------------------------------------------------------------
 
-cat << EOF
+cat <<EOF
 
 --------------------------------------------------------
 Your project has been renamed successfully!
@@ -62,7 +63,7 @@ EOF
 init_git_repo() {
   [ -d .git/ ] && rm -rf .git/
 
-cat << EOF
+  cat <<EOF
 
 --------------------------------------------------------
 $(git init)
@@ -73,15 +74,18 @@ EOF
 }
 
 while true; do
-    read -p "Do you want to init a new local git repo (y/n)? " -r yn
-    case "${yn}" in
-        [Yy]* ) init_git_repo; break;;
-        [Nn]* ) break;;
-        * ) echo "";;
-    esac
+  read -p "Do you want to init a new local git repo (y/n)? " -r yn
+  case "${yn}" in
+  [Yy]*)
+    init_git_repo
+    break
+    ;;
+  [Nn]*) break ;;
+  *) echo "" ;;
+  esac
 done
 
-cat << EOF
+cat <<EOF
 
 We're done here. Everything worked!
 

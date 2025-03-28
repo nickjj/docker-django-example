@@ -73,6 +73,25 @@ lint() {
   cmd ruff check "${@}"
 }
 
+format:shell() {
+  # Format shell scripts
+  local cmd=(shfmt)
+
+  if ! command -v shfmt >/dev/null 2>&1; then
+    local cmd=(docker container run --rm -i -v "${PWD}:/mnt" -u "$(id -u):$(id -g)" -w /mnt mvdan/shfmt:v3)
+  fi
+
+  local maybe_write=("--write")
+
+  for arg in "${@}"; do
+    if [ "${arg}" == "-d" ] || [ "${arg}" == "--diff" ]; then
+      unset "maybe_write[0]"
+    fi
+  done
+
+  "${cmd[@]}" "${maybe_write[@]}" "${@}" .
+}
+
 format() {
   # Format Python code
   cmd ruff check --fix
@@ -85,6 +104,7 @@ quality() {
   lint:shell
   lint
 
+  format:shell
   format
 }
 
@@ -182,6 +202,7 @@ ci:test() {
   # Execute Continuous Integration (CI) pipeline
   lint:dockerfile "${@}"
   lint:shell
+  format:shell --diff
 
   cp --no-clobber .env.example .env
 
