@@ -12,6 +12,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 - `setuptools` Python dependency since Docker recently removed this from the official Python image
 - `./run pip3 [...]` to run any Pip command
 - `./run yarn [...]` to run any Yarn command
+- `./run lint:shell` for linting shell scripts with ShellCheck
 
 ### Changed
 
