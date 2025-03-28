@@ -343,7 +343,12 @@ much appreciated!
 
 ## Updating dependencies
 
-Let's say you've customized your app and it's time to add a new dependency,
+You can run `./run uv:outdated` or `./run yarn:outdated` to get a list of
+outdated dependencies based on what you currently have installed. Once you've
+figured out what you want to update, go make those updates in your
+`pyproject.toml` and / or `package.json` file.
+
+Or, let's say you've customized your app and it's time to add a new dependency,
 either for Python or Node.
 
 #### In development:
@@ -356,7 +361,7 @@ either for Python or Node.
 
 ##### Option 2
 
-1. Run `./run uv add mypackage --no-sync ` or `run yarn add mypackage --no-lockfile` which will update your `pyproject.toml` or `package.json` with the latest version of that package but not install it
+1. Run `./run uv add mypackage --no-sync` or `run yarn add mypackage --no-lockfile` which will update your `pyproject.toml` or `package.json` with the latest version of that package but not install it
 2. The same step as step 2 from option 1
 
 Either option is fine, it's up to you based on what's more convenient at the
