@@ -355,13 +355,13 @@ either for Python or Node.
 
 ##### Option 1
 
-1. Directly edit `pyproject.toml` or `package.json` to add your package
+1. Directly edit `pyproject.toml` or `assets/package.json` to add your package
 2. `./run deps:install` or `./run deps:install --no-build`
     - The `--no-build` option will only write out a new lock file without re-building your image
 
 ##### Option 2
 
-1. Run `./run uv add mypackage --no-sync` or `run yarn add mypackage --no-lockfile` which will update your `pyproject.toml` or `package.json` with the latest version of that package but not install it
+1. Run `./run uv add mypackage --no-sync` or `run yarn add mypackage --no-lockfile` which will update your `pyproject.toml` or `assets/package.json` with the latest version of that package but not install it
 2. The same step as step 2 from option 1
 
 Either option is fine, it's up to you based on what's more convenient at the
