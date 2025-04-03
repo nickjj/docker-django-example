@@ -12,7 +12,7 @@ practices](https://nickjanetakis.com/blog/best-practices-around-production-ready
 based on building and deploying dozens of assorted Dockerized web apps since
 late 2014.
 
-**This app is using Django 5.1.7 and Python 3.13.2**. The screenshot shows
+**This app is using Django 5.2 and Python 3.13.2**. The screenshot shows
 `X.X.X` since they get updated regularly:
 
 [![Screenshot](.github/docs/screenshot.jpg)](https://github.com/nickjj/docker-django-example/blob/main/.github/docs/screenshot.jpg?raw=true)
@@ -399,7 +399,7 @@ couple of free and paid resources. There's Google too!
 #### Official documentation
 
 - <https://docs.docker.com/>
-- <https://docs.djangoproject.com/en/5.1/>
+- <https://docs.djangoproject.com/en/5.2/>
 
 #### Courses / books
 
