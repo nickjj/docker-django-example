@@ -6,13 +6,13 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
   "django==5.2",
-  "celery==5.5.0",
-  "django-debug-toolbar==5.1.0",
+  "celery==5.5.2",
+  "django-debug-toolbar==5.2.0",
   "gunicorn==23.0.0",
-  "psycopg==3.2.6",
-  "redis==5.2.1",
-  "ruff==0.11.2",
-  "setuptools==78.1.0",
+  "psycopg==3.2.7",
+  "redis==6.0.0",
+  "ruff==0.11.7",
+  "setuptools==80.1.0",
   "whitenoise==6.9.0",
 ]
 
