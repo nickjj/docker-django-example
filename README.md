@@ -12,7 +12,7 @@ practices](https://nickjanetakis.com/blog/best-practices-around-production-ready
 based on building and deploying dozens of assorted Dockerized web apps since
 late 2014.
 
-**This app is using Django 5.2 and Python 3.13.2**. The screenshot shows
+**This app is using Django 5.2 and Python 3.13.3**. The screenshot shows
 `X.X.X` since they get updated regularly:
 
 [![Screenshot](.github/docs/screenshot.jpg)](https://github.com/nickjj/docker-django-example/blob/main/.github/docs/screenshot.jpg?raw=true)

@@ -33,7 +33,7 @@ CMD ["bash"]
 
 ###############################################################################
 
-FROM python:3.13.2-slim-bookworm AS app-build
+FROM python:3.13.3-slim-bookworm AS app-build
 LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app
@@ -69,7 +69,7 @@ CMD ["bash"]
 
 ###############################################################################
 
-FROM python:3.13.2-slim-bookworm AS app
+FROM python:3.13.3-slim-bookworm AS app
 LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app
