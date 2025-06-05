@@ -8,7 +8,7 @@ from django.shortcuts import render
 def home(request):
     context = {
         "debug": settings.DEBUG,
-        "django_ver": get_version()+"PROBANDO CAMBIOS ESTOS Y MAS CAMBIOS, VARIOS CAMBIOS A ESTE CODIGO",
+        "django_ver": get_version()+"PROBANDO, VARIOS CAMBIOS A ESTE CODIGO",
         "python_ver": os.environ["PYTHON_VERSION"]+"OTROS CAMBIOS",
     }
 
