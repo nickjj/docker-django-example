@@ -1,0 +1,12 @@
+{% include "ecommerce/messages.html" %}
+
+<h1>
+Eliminar - {{ product.title }}    
+</h1>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    ¿Estás seguro que quieres eliminar el producto?
+    <input type="submit" value="Eliminar">
+    <a href="/ecommerce/{{ product.id }}">Cancelar</a>
+</form>
