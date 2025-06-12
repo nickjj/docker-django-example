@@ -31,9 +31,10 @@ def product_model_list_view(request):
 def product_model_delete_view(request, product_id):
     instance = get_object_or_404(ProductModel, id=product_id)
     if request.method == "POST":
+        w_product = ProductModel.title
         instance.delete()
-        HttpResponseRedirect("/ecommerce/")
-        messages.success(request, "Producto eliminado") 
+        HttpResponseRedirect("")
+        messages.success(request, "Producto eliminado ") 
         return HttpResponseRedirect("/ecommerce/")
     context = {
         "product":instance
@@ -49,7 +50,7 @@ def product_model_update_view(request, product_id=None):
         instance = form.save(commit=False)
         instance.save()
         messages.success(request, "Producto actualizado con exito")
-        return HttpResponseRedirect("/ecommerce/{product_id}".format(product_id=instance.id)) 
+        return HttpResponseRedirect("/ecommerce/{product_id}/detail/".format(product_id=instance.id)) 
     context = {
         "form":form
     }
@@ -62,7 +63,7 @@ def product_model_create_view(request):
         instance = form.save(commit=False)
         instance.save()
         messages.success(request, "Producto creado con exito")
-        return HttpResponseRedirect("/ecommerce/{product_id}".format(product_id=instance.id)) 
+        return HttpResponseRedirect("/ecommerce/{product_id}/detail/".format(product_id=instance.id)) 
     context = {
         "form":form
     }
