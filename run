@@ -122,7 +122,13 @@ psql() {
   # Connect to PostgreSQL
   # shellcheck disable=SC1091
   . .env
-  _dc postgres psql -d "${POSTGRES_DB}" -U "${POSTGRES_USER}" "${@}"
+
+  local cmd="psql -U ${POSTGRES_USER}"
+  if [[ -n "${POSTGRES_DB}" ]]; then
+    local cmd="${cmd} -d ${POSTGRES_DB}"
+  fi
+
+  _dc postgres ${cmd} "${@}"
 }
 
 redis-cli() {
