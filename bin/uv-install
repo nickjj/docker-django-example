@@ -4,9 +4,7 @@ set -o errexit
 set -o pipefail
 
 # Ensure we always have a valid up to date lock file.
-if test -f uv.lock; then
-  uv lock --check
-else
+if ! test -f uv.lock || ! uv lock --check 2>/dev/null; then
   uv lock
 fi
 
