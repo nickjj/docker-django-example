@@ -35,12 +35,12 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Back-end dependencies
 
 - Update `celery` to `5.5.3`
-- Update `django-debug-toolbar` to `5.2.0`
-- Update `django` to `5.2.3`
+- Update `django-debug-toolbar` to `6.0.0`
+- Update `django` to `5.2.4`
 - Update `gunicorn` to `23.0.0`
 - Update `psycopg` to `3.2.9`
 - Update `redis` to `6.2.0`
-- Update `ruff` to `0.12.1`
+- Update `ruff` to `0.12.7`
 - Update `setuptools` to `80.9.0`
 - Update `whitenoise` to `6.9.0`
 
