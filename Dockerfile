@@ -1,4 +1,4 @@
-FROM node:22.17.1-bookworm-slim AS assets
+FROM node:22.18.0-bookworm-slim AS assets
 LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app/assets
