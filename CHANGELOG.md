@@ -46,10 +46,10 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Front-end dependencies
 
-- Update `@tailwindcss/cli` to `4.1.11`
-- Update `@tailwindcss/postcss` to `4.1.11`
-- Update `esbuild` to `0.25.8`
-- Update `tailwindcss` to `4.1.11`
+- Update `@tailwindcss/cli` to `4.1.12`
+- Update `@tailwindcss/postcss` to `4.1.12`
+- Update `esbuild` to `0.25.9`
+- Update `tailwindcss` to `4.1.12`
 
 ## [0.11.0] - 2024-08-09
 
