@@ -53,6 +53,8 @@ services:
     image: "postgres:17.6-bookworm"
     profiles: ["postgres"]
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+    ports:
+      - "${DOCKER_DB_PORT_FORWARD:-}:${PORT:-5432}"
     stop_grace_period: "3s"
     volumes:
       - "postgres:/var/lib/postgresql/data"
