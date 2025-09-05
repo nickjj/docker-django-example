@@ -1,7 +1,7 @@
 [project]
-name = "hello"
+name = "travelpals"
 version = "0.1.0"
-description = "An example Django app running in Docker."
+description = "TravelPals app on Django."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
