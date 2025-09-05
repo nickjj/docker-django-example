@@ -56,8 +56,6 @@ services:
     ports:
       - "${DOCKER_DB_PORT_FORWARD:-}:${PORT:-5432}"
     stop_grace_period: "3s"
-    ports:
-      - "127.0.0.1:5432:5432"
     volumes:
       - "postgres:/var/lib/postgresql/data"
 
