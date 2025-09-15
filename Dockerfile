@@ -49,7 +49,7 @@ RUN apt-get update \
   && useradd --create-home --no-log-init -u "${UID}" -g "${GID}" python \
   && chown python:python -R /app
 
-COPY --from=ghcr.io/astral-sh/uv:0.7.13 /uv /uvx /usr/local/bin/
+COPY --from=ghcr.io/astral-sh/uv:0.8.17 /uv /uvx /usr/local/bin/
 
 USER python
 
