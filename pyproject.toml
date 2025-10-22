@@ -9,9 +9,9 @@ dependencies = [
   "celery==5.5.3",
   "django-debug-toolbar==6.0.0",
   "gunicorn==23.0.0",
-  "psycopg==3.2.10",
+  "psycopg==3.2.11",
   "redis==6.4.0",
-  "ruff==0.14.0",
+  "ruff==0.14.1",
   "setuptools==80.9.0",
   "whitenoise==6.11.0",
 ]
