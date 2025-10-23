@@ -55,7 +55,7 @@ services:
     restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
     stop_grace_period: "3s"
     volumes:
-      - "postgres:/var/lib/postgresql/data"
+      - "postgres:/var/lib/postgresql"
 
   redis:
     deploy:
