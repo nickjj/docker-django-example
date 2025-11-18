@@ -5,13 +5,13 @@ description = "An example Django app running in Docker."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-  "django==5.2.7",
+  "django==5.2.8",
   "celery==5.5.3",
-  "django-debug-toolbar==6.0.0",
+  "django-debug-toolbar==6.1.0",
   "gunicorn==23.0.0",
-  "psycopg==3.2.11",
-  "redis==6.4.0",
-  "ruff==0.14.1",
+  "psycopg==3.2.12",
+  "redis==7.0.1",
+  "ruff==0.14.5",
   "setuptools==80.9.0",
   "whitenoise==6.11.0",
 ]
