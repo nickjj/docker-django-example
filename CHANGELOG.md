@@ -28,7 +28,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 #### Languages and services
 
 - Update `Python` to `3.14.0`
-- Update `Node` to `22.21.0`
+- Update `Node` to `22.21.1`
 - Update `Postgres` to `18.1`
 - Update `Redis` to `8.2.3`
 
