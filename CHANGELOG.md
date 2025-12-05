@@ -48,7 +48,7 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Update `@tailwindcss/cli` to `4.1.17`
 - Update `@tailwindcss/postcss` to `4.1.17`
-- Update `esbuild` to `0.27.0`
+- Update `esbuild` to `0.27.1`
 - Update `tailwindcss` to `4.1.17`
 
 ## [0.11.0] - 2024-08-09
