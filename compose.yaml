@@ -33,7 +33,7 @@ x-assets: &default-assets
   env_file:
     - ".env"
   profiles: ["assets"]
-  restart: "${DOCKER_RESTART_POLICY:-unless-stopped}"
+  restart: "no"
   stop_grace_period: "0"
   tty: true
   volumes:
