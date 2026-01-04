@@ -2,10 +2,10 @@
   "name": "hello",
   "private": true,
   "dependencies": {
-    "esbuild": "0.27.1",
+    "esbuild": "0.27.2",
     "esbuild-copy-static-files": "0.1.0",
-    "tailwindcss": "4.1.17",
-    "@tailwindcss/cli": "4.1.17",
-    "@tailwindcss/postcss": "4.1.17"
+    "tailwindcss": "4.1.18",
+    "@tailwindcss/cli": "4.1.18",
+    "@tailwindcss/postcss": "4.1.18"
   }
 }
