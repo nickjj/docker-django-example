@@ -1,4 +1,4 @@
-FROM node:22.21.1-trixie-slim AS assets
+FROM node:24.12.0-trixie-slim AS assets
 LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app/assets
