@@ -167,3 +167,6 @@ if DEBUG:
         "127.0.0.1",
         "10.0.2.2",
     ]
+    # Fix:  No SQL trace for swagger requests
+    # https://github.com/django-commons/django-debug-toolbar/issues/1204
+    DEBUG_TOOLBAR_CONFIG = { "UPDATE_ON_FETCH": True }
