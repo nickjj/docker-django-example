@@ -157,18 +157,9 @@ docker compose up --build
 Now that everything is built and running we can treat it like any other Django
 app.
 
-Did you receive a `depends_on` "Additional property required is not allowed"
-error? Please update to at least Docker Compose v2.20.2+ or Docker Desktop
-4.22.0+.
-
 Did you receive an error about a port being in use? Chances are it's because
 something on your machine is already running on port 8000. Check out the docs
 in the `.env` file for the `DOCKER_WEB_PORT_FORWARD` variable to fix this.
-
-Did you receive a permission denied error? Chances are you're running native
-Linux and your `uid:gid` aren't `1000:1000` (you can verify this by running
-`id`). Check out the docs in the `.env` file to customize the `UID` and `GID`
-variables to fix this.
 
 #### Setup the initial database:
 
