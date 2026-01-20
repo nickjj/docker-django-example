@@ -169,4 +169,4 @@ if DEBUG:
     ]
     # Fix:  No SQL trace for swagger requests
     # https://github.com/django-commons/django-debug-toolbar/issues/1204
-    DEBUG_TOOLBAR_CONFIG = { "UPDATE_ON_FETCH": True }
+    DEBUG_TOOLBAR_CONFIG = {"UPDATE_ON_FETCH": True}

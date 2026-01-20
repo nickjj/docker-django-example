@@ -19,10 +19,17 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 
+from main.views import router as main_router
+
+from .api import ninja_api
+
+ninja_api.add_router(prefix="gtop/", router=main_router)
+
 urlpatterns = [
     path("up/", include("up.urls")),
     path("", include("pages.urls")),
     path("admin/", admin.site.urls),
+    path("api/", ninja_api.urls),
 ]
 if not settings.TESTING:
     urlpatterns = [
