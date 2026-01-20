@@ -1,6 +1,6 @@
 # Mostly created by https://www.gitignore.io
 
-
+.idea
 ### App #######################################################################
 
 public/*
@@ -13,6 +13,8 @@ public_collected/*
 docker-compose.override.yml
 
 
+# Media files
+media_collected/
 ### Python ####################################################################
 
 # Byte-compiled / optimized / DLL files
