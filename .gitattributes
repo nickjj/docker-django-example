@@ -1,0 +1,9 @@
+# 所有文本文件都用 LF
+* text=auto eol=lf
+
+# 针对脚本强化（bash / shell / python 等）
+*.sh          text eol=lf
+bin/*         text eol=lf
+*.py          text eol=lf
+*.env         text eol=lf
+Dockerfile    text eol=lf

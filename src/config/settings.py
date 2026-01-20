@@ -156,6 +156,10 @@ STATICFILES_DIRS = ["/public", os.path.join(BASE_DIR, "..", "public")]
 STATIC_ROOT = "/public_collected"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+# Media的相关配置
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "..", "data", "media_collected")
+
 # Django Debug Toolbar
 # https://django-debug-toolbar.readthedocs.io/
 if DEBUG:
@@ -167,3 +171,6 @@ if DEBUG:
         "127.0.0.1",
         "10.0.2.2",
     ]
+    # Fix:  No SQL trace for swagger requests
+    # https://github.com/django-commons/django-debug-toolbar/issues/1204
+    DEBUG_TOOLBAR_CONFIG = {"UPDATE_ON_FETCH": True}

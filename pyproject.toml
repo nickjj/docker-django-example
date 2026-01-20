@@ -14,6 +14,11 @@ dependencies = [
   "ruff==0.14.10",
   "setuptools==80.9.0",
   "whitenoise==6.11.0",
+  "django-ninja==1.5.3",
+  "ipython>=9.8.0",
+  "pydantic[email]>=2.12.4",
+  "django-cors-headers==4.9.0",
+  "tablib>=3.9.0",
 ]
 
 [tool.ruff]
