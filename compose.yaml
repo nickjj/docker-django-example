@@ -21,6 +21,10 @@ x-app: &default-app
   tty: true
   volumes:
     - "${DOCKER_WEB_VOLUME:-./public_collected:/app/public_collected}"
+  environment:
+    HTTP_PROXY: http://192.168.60.246:3128
+    HTTPS_PROXY: http://192.168.60.246:3128
+    NO_PROXY: localhost,127.0.0.1,192.168.60.28,10.49.19.138,git.nbc.cn
 
 x-assets: &default-assets
   build:
@@ -38,6 +42,10 @@ x-assets: &default-assets
   tty: true
   volumes:
     - ".:/app"
+  environment:
+    HTTP_PROXY: http://192.168.60.246:3128
+    HTTPS_PROXY: http://192.168.60.246:3128
+    NO_PROXY: localhost,127.0.0.1,192.168.60.28,10.49.19.138,git.nbc.cn
 
 services:
   postgres:

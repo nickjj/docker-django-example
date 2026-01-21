@@ -5,6 +5,12 @@ WORKDIR /app/assets
 
 ARG APP_UID=1000
 ARG APP_GID=1000
+ARG http_proxy=http://192.168.60.246:3128
+ARG https_proxy=http://192.168.60.246:3128
+
+RUN printf 'Acquire::http::Proxy "%s";\nAcquire::https::Proxy "%s";\n' \
+    "$http_proxy" "$https_proxy" \
+    > /etc/apt/apt.conf.d/99proxy
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends build-essential \
@@ -40,6 +46,12 @@ WORKDIR /app
 
 ARG APP_UID=1000
 ARG APP_GID=1000
+ARG http_proxy=http://192.168.60.246:3128
+ARG https_proxy=http://192.168.60.246:3128
+
+RUN printf 'Acquire::http::Proxy "%s";\nAcquire::https::Proxy "%s";\n' \
+    "$http_proxy" "$https_proxy" \
+    > /etc/apt/apt.conf.d/99proxy
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends build-essential curl libpq-dev \
@@ -76,6 +88,12 @@ WORKDIR /app
 
 ARG APP_UID=1000
 ARG APP_GID=1000
+ARG http_proxy=http://192.168.60.246:3128
+ARG https_proxy=http://192.168.60.246:3128
+
+RUN printf 'Acquire::http::Proxy "%s";\nAcquire::https::Proxy "%s";\n' \
+    "$http_proxy" "$https_proxy" \
+    > /etc/apt/apt.conf.d/99proxy
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends curl libpq-dev \
