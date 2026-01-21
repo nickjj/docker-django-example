@@ -1,0 +1,104 @@
+# .gitlab-ci.yml
+# Pipeline triggers:
+# - Merge Requests from any branch
+# - Push to main/master
+# - Scheduled pipelines (configure cron in GitLab UI)
+
+stages:
+  - verify
+  - deploy_test
+#  - deploy_pre
+  - deploy_prod
+
+image: cruizba/ubuntu-dind:noble-28.5.1
+
+verify :
+  stage: verify
+  tags:
+    - test
+  rules:
+    # Merge Request pipelines
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  before_script:
+    - export DEBIAN_FRONTEND=noninteractive
+    - sed -i "s@\(archive\|security\).ubuntu.com@mirrors.aliyun.com@g" /etc/apt/sources.list
+    - apt-get update
+    - apt-get install -y --no-install-recommends sudo ca-certificates git curl && apt-get clean
+  script:
+    - ./run ci:install-deps
+
+    # Remove volumes in CI to avoid permission errors due to UID / GID.
+    - sed -i 's|.:/app|/tmp:/tmp|g' .env*
+    - sed -i 's|.:/app|/tmp:/tmp|g' compose.yaml
+
+      # Django requires static files to be collected in order to run its
+      # test suite. That means we need to generate production assets from
+      # esbuild. This line ensures NODE_ENV is set to production.
+    - sed -i 's|export NODE_ENV|#export NODE_ENV|g' .env*
+
+    - ./run ci:test
+  after_script:
+    - docker compose down --volumes --remove-orphans || true
+
+.deploy_template:
+  before_script:
+    - export DEBIAN_FRONTEND=noninteractive
+    - sed -i "s@\(archive\|security\).ubuntu.com@mirrors.aliyun.com@g" /etc/apt/sources.list
+    - apt-get update
+    - apt-get install -y --no-install-recommends sudo ca-certificates git curl && apt-get clean
+  script:
+    - ./run ci:install-deps
+  variables:
+    DOCKER_BUILDKIT: "1"
+    COMPOSE_DOCKER_CLI_BUILD: "1"
+
+
+deploy_test:
+  stage: deploy_test
+  tags:
+    - test
+  script:
+    - |
+      {
+       echo "$ENV_TEST_COMMON"
+       echo "$ENV_TEST_PROJECT"
+         } > .env
+      cat .env
+    - docker compose build
+    - docker compose up -d
+  variables:
+    TARGET_ENV: "test"
+  extends: .deploy_template
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "test"'
+
+#deploy_pre:
+#  stage: deploy_pre
+#  tags:
+#    - pre
+#  variables:
+#    TARGET_ENV: "pre"
+#  extends: .deploy_template
+#  rules:
+#    - if: '$CI_COMMIT_BRANCH == "pre"'
+
+deploy_prod:
+  stage: deploy_prod
+  tags:
+    - prod
+  script:
+    - |
+      {
+       echo "$ENV_PROD_COMMON"
+       echo "$ENV_PROD_PROJECT"
+         } > .env
+      cat .env
+    - docker compose build
+    - docker compose up -d
+    - ./run manage migrate
+  variables:
+    TARGET_ENV: "prod"
+  extends: .deploy_template
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual
