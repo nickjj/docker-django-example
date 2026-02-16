@@ -172,6 +172,12 @@ Linux and your `uid:gid` aren't `1000:1000` (you can verify this by running
 `id`). Check out the docs in the `.env` file to customize the `UID` and `GID`
 variables to fix this.
 
+Did you receive a `'bash\r': No such file or directory` error? This happens
+when shell scripts have Windows line endings (CRLF) instead of Unix line
+endings (LF). The `.gitattributes` file in this project enforces LF line
+endings for shell scripts. If you cloned the repository before this file
+existed, you can fix this by running: `git rm --cached -r . && git reset --hard`
+
 #### Setup the initial database:
 
 ```sh

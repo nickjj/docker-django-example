@@ -1,0 +1,45 @@
+# Enforce Unix-style line endings for shell scripts
+# This prevents issues on Windows where Git converts to CRLF
+*.sh text eol=lf
+run text eol=lf
+bin/* text eol=lf
+
+# Python files
+*.py text eol=lf
+
+# JavaScript and related files
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+
+# CSS and related files
+*.css text eol=lf
+
+# Configuration files
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.conf text eol=lf
+*.config text eol=lf
+Dockerfile text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.txt text eol=lf
+
+# Templates
+*.html text eol=lf
+
+# Ensure binary files are not modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.otf binary
+*.webmanifest binary
