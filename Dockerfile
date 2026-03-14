@@ -63,8 +63,9 @@ ENV PYTHONUNBUFFERED="true" \
   PATH="${PATH}:/home/python/.local/bin" \
   USER="python"
 
-RUN chmod 0755 bin/* && bin/uv-install
-
+RUN chmod +x bin/*
+RUN sed -i 's/\r$//' bin/*
+RUN ./bin/uv-install
 CMD ["bash"]
 
 ###############################################################################
