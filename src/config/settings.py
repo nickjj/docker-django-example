@@ -140,6 +140,7 @@ CACHES = {
 # https://docs.celeryproject.org/en/stable/userguide/configuration.html
 CELERY_BROKER_URL = REDIS_URL
 CELERY_RESULT_BACKEND = REDIS_URL
+CELERY_WORKER_LOG_LEVEL = os.getenv("CELERY_WORKER_LOG_LEVEL", "info")
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
