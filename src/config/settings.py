@@ -142,7 +142,7 @@ CELERY_BROKER_URL = REDIS_URL
 CELERY_RESULT_BACKEND = REDIS_URL
 CELERY_WORKER_LOG_LEVEL = os.getenv("CELERY_WORKER_LOG_LEVEL", "info")
 
-# Storage
+# Storages
 # https://docs.djangoproject.com/en/6.0/ref/settings/#storages
 STORAGES = {
     "staticfiles": {
