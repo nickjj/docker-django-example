@@ -142,6 +142,20 @@ CELERY_BROKER_URL = REDIS_URL
 CELERY_RESULT_BACKEND = REDIS_URL
 CELERY_WORKER_LOG_LEVEL = os.getenv("CELERY_WORKER_LOG_LEVEL", "info")
 
+# Storage
+# https://docs.djangoproject.com/en/6.0/ref/settings/#storages
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/6.0/howto/static-files/
+STATIC_URL = "/static/"
+STATICFILES_DIRS = ["/public", os.path.join(BASE_DIR, "..", "public")]
+STATIC_ROOT = "/public_collected"
+
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 LANGUAGE_CODE = "en-us"
@@ -149,13 +163,6 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/6.0/howto/static-files/
-STATIC_URL = "/static/"
-STATICFILES_DIRS = ["/public", os.path.join(BASE_DIR, "..", "public")]
-STATIC_ROOT = "/public_collected"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Django Debug Toolbar
 # https://django-debug-toolbar.readthedocs.io/
