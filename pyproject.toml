@@ -11,7 +11,7 @@ dependencies = [
   "gunicorn==26.0.0",
   "psycopg==3.3.4",
   "redis==8.0.1",
-  "ruff==0.15.20",
+  "ruff==0.16.0",
   "setuptools==83.0.0",
   "whitenoise==6.12.0",
 ]
@@ -20,4 +20,4 @@ dependencies = [
 line-length = 79
 
 [tool.ruff.lint]
-extend-select = ["I", "SIM"]
+extend-select = ["I", "SIM", "E501"]
