@@ -13,7 +13,7 @@ RUN apt-get update \
   && groupmod -g "${APP_GID}" node && usermod -u "${APP_UID}" -g "${APP_GID}" node \
   && mkdir -p /node_modules && chown node:node -R /node_modules /app
 
-USER 1000
+USER node
 
 COPY --chown=node:node assets/package.json assets/*yarn* ./
 
@@ -51,7 +51,7 @@ RUN apt-get update \
 
 COPY --from=ghcr.io/astral-sh/uv:0.8.17 /uv /uvx /usr/local/bin/
 
-USER 1000
+USER python
 
 COPY --chown=python:python pyproject.toml uv.lock* ./
 COPY --chown=python:python bin/ ./bin
@@ -86,7 +86,7 @@ RUN apt-get update \
   && mkdir -p /public_collected public \
   && chown python:python -R /public_collected /app
 
-USER 1000
+USER python
 
 ARG DEBUG="false"
 ENV DEBUG="${DEBUG}" \
